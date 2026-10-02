@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlipBook from '../../components/FlipBook.astro';
+import { loadAllEdicoes, loadEdicao, loadResumos } from '../../utils/load-capitulos';
+
+export function getStaticPaths() {
+  return loadAllEdicoes().map((edicao) => ({
+    params: { slug: edicao.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const edicao = loadEdicao(slug!);
+
+if (!edicao) {
+  return Astro.redirect(import.meta.env.BASE_URL);
+}
+
+const edicoes = loadResumos();
+---
+
+<BaseLayout title={edicao.titulo} chrome="immersive">
+  <FlipBook edicao={edicao} edicoes={edicoes} />
+</BaseLayout>

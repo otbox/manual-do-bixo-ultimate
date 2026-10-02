@@ -1,0 +1,13 @@
+---
+interface Props {
+  itens: string[];
+}
+const { itens } = Astro.props;
+---
+
+<aside class="macete" aria-label="Macete">
+  <span class="macete__selo">MACETE!</span>
+  <ul class="macete__lista">
+    {itens.map((item) => <li>{item}</li>)}
+  </ul>
+</aside>

@@ -1,6 +1,10 @@
 # Referências Históricas (síntese dos PDFs)
 
+Arquivos originais em [`fontes/`](../fontes/README.md).
+
 ## Manual do Bixo 2013 (CAT/FT)
+
+Arquivo: [`fontes/manual-do-bixo-2013-cat-ft.pdf`](../fontes/manual-do-bixo-2013-cat-ft.pdf)
 
 Tom ácido e combativo. Destaques:
 
@@ -13,6 +17,8 @@ Tom ácido e combativo. Destaques:
 
 ## Manual dos Bixos CDI 2024
 
+Arquivo: [`fontes/manual-dos-bixos-cdi-2024.pdf`](../fontes/manual-dos-bixos-cdi-2024.pdf)
+
 Tom leve e acolhedor (linha estética que seguimos). Destaques:
 
 - CDI: meio oficial aluno-docente na FT; eventos, visitas técnicas (Mercado Livre, Microsoft, Oracle, iFood, Padtec, Eldorado)
@@ -20,6 +26,12 @@ Tom leve e acolhedor (linha estética que seguimos). Destaques:
 - Ferramentas: DAC, e-DAC, SIGA, Moodle, Google Classroom, Office 365 gratuito
 - Apoio: SAE, SAPPE (psicologia/psiquiatria), bolsas BAS, BAM, BAT
 - Ecossistema: atléticas, ligas (data science, blockchain, mercado financeiro), empresas juniores, centros acadêmicos
+
+## Manual do Bixo 2026 (Canva)
+
+Arquivo: [`fontes/manual-do-bixo-2026.pdf`](../fontes/manual-do-bixo-2026.pdf)
+
+Referência de estética e leveza (linha principal do tom em [01-estilo-e-tom.md](./01-estilo-e-tom.md)). Usar como norte visual/ritmo de leitura, não como texto a copiar.
 
 ## Regra de uso
 

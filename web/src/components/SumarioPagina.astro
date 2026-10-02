@@ -1,0 +1,22 @@
+---
+import type { EdicaoResumo } from '../types/hq';
+import Sumario from './Sumario.astro';
+
+interface Props {
+  edicoes: EdicaoResumo[];
+  edicaoAtualSlug: string;
+  sumarioPageIndex?: number;
+}
+const { edicoes, edicaoAtualSlug, sumarioPageIndex = 1 } = Astro.props;
+---
+
+<article class="sumario-pagina" aria-label="Sumário da edição">
+  <div class="sumario-pagina__burst" aria-hidden="true"></div>
+  <Sumario
+    edicoes={edicoes}
+    edicaoAtualSlug={edicaoAtualSlug}
+    sumarioPageIndex={sumarioPageIndex}
+    variant="page"
+  />
+  <p class="sumario-pagina__footer">Vire a página → a missão continua</p>
+</article>

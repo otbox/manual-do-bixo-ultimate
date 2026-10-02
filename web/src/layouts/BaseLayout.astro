@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** `immersive` = chrome mínimo para o leitor ocupar a tela. */
+  chrome?: 'full' | 'immersive';
+}
+const {
+  title = 'Manual do Bixo Ultimate',
+  description = 'Guia satírico para calouros da Unicamp, em formato de revista em quadrinhos folheável.',
+  chrome = 'full',
+} = Astro.props;
+
+const pageTitle =
+  title === 'Manual do Bixo Ultimate' ? title : `${title} · Manual do Bixo Ultimate`;
+---
+
+<!doctype html>
+<html lang="pt-BR" class={chrome === 'immersive' ? 'is-immersive' : undefined}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0b0d12" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class={`app-shell app-shell--${chrome}`}>
+      {
+        chrome === 'immersive' ? (
+          <header class="app-header app-header--slim">
+            <a class="app-header__brand" href={import.meta.env.BASE_URL}>MDB · Ultimate</a>
+            <span class="app-header__issue">ISSUE</span>
+          </header>
+        ) : (
+          <header class="app-header">
+            <a class="app-header__brand" href={import.meta.env.BASE_URL}>Manual do Bixo Ultimate</a>
+            <span class="app-header__issue">HQ · Unicamp</span>
+          </header>
+        )
+      }
+      <main class="app-main">
+        <slot />
+      </main>
+      {chrome === 'full' && (
+        <footer class="app-footer">Feito pra calouro · FT/Unicamp</footer>
+      )}
+    </div>
+  </body>
+</html>

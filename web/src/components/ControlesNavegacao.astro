@@ -1,0 +1,39 @@
+---
+interface Props {
+  totalPaginas: number;
+}
+const { totalPaginas } = Astro.props;
+---
+
+<div class="controles" data-controles>
+  <div class="controles__nav" role="group" aria-label="Navegação de páginas">
+    <button type="button" class="controles__btn" data-action="prev" aria-label="Página anterior">
+      ◀
+    </button>
+    <p class="controles__indicador" aria-live="polite">
+      <span data-page-current>1</span>
+      <span class="controles__sep">/</span>
+      <span data-page-total>{totalPaginas}</span>
+    </p>
+    <button type="button" class="controles__btn" data-action="next" aria-label="Próxima página">
+      ▶
+    </button>
+  </div>
+  <button
+    type="button"
+    class="controles__btn controles__btn--ghost"
+    data-action="goto-sumario"
+    aria-label="Ir ao sumário"
+  >
+    ★ Sumário
+  </button>
+  <button
+    type="button"
+    class="controles__btn controles__btn--ghost"
+    data-action="toggle-mode"
+    aria-pressed="false"
+    aria-label="Alternar modo de leitura"
+  >
+    Rolagem
+  </button>
+</div>

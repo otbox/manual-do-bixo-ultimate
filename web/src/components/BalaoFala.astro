@@ -1,0 +1,14 @@
+---
+interface Props {
+  texto: string;
+}
+const { texto } = Astro.props;
+---
+
+<figure class="balao">
+  <span class="balao__rabicho" aria-hidden="true"></span>
+  <figcaption class="balao__rotulo">Veterano diz:</figcaption>
+  <blockquote class="balao__texto">
+    <p>{texto}</p>
+  </blockquote>
+</figure>

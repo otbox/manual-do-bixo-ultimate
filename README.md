@@ -12,7 +12,9 @@ A versão web terá formato de **revista em quadrinhos folheável** (page-flip, 
 
 ```
 ├── docs/         → direcionamento do projeto, guia de estilo, referências e padrões
-└── capitulos/    → capítulos do manual (o produto final em markdown)
+├── capitulos/    → capítulos do manual (o produto final em markdown)
+├── fontes/       → PDFs históricos/base (2013, CDI 2024, edição 2026)
+└── web/          → versão HQ folheável (Astro)
 ```
 
 ## Documentação
@@ -29,4 +31,9 @@ A versão web terá formato de **revista em quadrinhos folheável** (page-flip, 
 
 ## Fontes de referência
 
-Manuais históricos da FT/Unicamp em PDF, sintetizados e reescritos (nunca copiados): Manual do Bixo 2013 (CAT/FT), Manual dos Bixos CDI 2024, entre outros.
+PDFs originais em [`fontes/`](fontes/README.md) (sintetizar e reescrever, nunca copiar):
+
+- [Manual do Bixo 2013 (CAT/FT)](fontes/manual-do-bixo-2013-cat-ft.pdf)
+- [Manual dos Bixos CDI 2024](fontes/manual-dos-bixos-cdi-2024.pdf)
+- [Manual do Bixo 2026 (Canva)](fontes/manual-do-bixo-2026.pdf)
+

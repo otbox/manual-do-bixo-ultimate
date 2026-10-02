@@ -1,0 +1,35 @@
+---
+import type { EdicaoResumo } from '../types/hq';
+import Sumario from './Sumario.astro';
+
+interface Props {
+  edicoes: EdicaoResumo[];
+  edicaoAtualSlug: string;
+  sumarioPageIndex?: number;
+}
+const { edicoes, edicaoAtualSlug, sumarioPageIndex = 1 } = Astro.props;
+---
+
+<aside class="marcador" data-marcador>
+  <button
+    type="button"
+    class="marcador__aba"
+    data-action="toggle-marcador"
+    aria-expanded="false"
+    aria-controls="marcador-painel"
+  >
+    <span class="marcador__aba-texto">SUMÁRIO</span>
+  </button>
+
+  <div class="marcador__painel" id="marcador-painel" data-marcador-painel>
+    <button type="button" class="marcador__goto" data-action="goto-sumario" data-goto-page={String(sumarioPageIndex)}>
+      ★ Voltar ao sumário
+    </button>
+    <Sumario
+      edicoes={edicoes}
+      edicaoAtualSlug={edicaoAtualSlug}
+      sumarioPageIndex={sumarioPageIndex}
+      variant="drawer"
+    />
+  </div>
+</aside>

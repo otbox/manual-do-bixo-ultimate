@@ -1,0 +1,84 @@
+---
+import type { Edicao, EdicaoResumo } from '../types/hq';
+import CapaEdicao from './CapaEdicao.astro';
+import PaginaHQ from './PaginaHQ.astro';
+import SumarioPagina from './SumarioPagina.astro';
+import MarcadorLateral from './MarcadorLateral.astro';
+import ControlesNavegacao from './ControlesNavegacao.astro';
+
+interface Props {
+  edicao: Edicao;
+  edicoes: EdicaoResumo[];
+}
+const { edicao, edicoes } = Astro.props;
+/** capa(0) + sumário(1) + conteúdo */
+const SUMARIO_PAGE = 1;
+const totalFolhas = edicao.paginas.length + 2;
+---
+
+<section class="leitor" data-leitor data-mode="flip" data-sumario-page={SUMARIO_PAGE}>
+  <MarcadorLateral
+    edicoes={edicoes}
+    edicaoAtualSlug={edicao.slug}
+    sumarioPageIndex={SUMARIO_PAGE}
+  />
+
+  <div class="leitor__stage">
+    <div class="flip-mode" data-flip-mode>
+      <div class="hq-book" data-hq-book>
+        <div class="page" data-density="hard">
+          <CapaEdicao
+            titulo={edicao.titulo}
+            numero={edicao.numero}
+            totalPaginas={edicao.paginas.length}
+          />
+        </div>
+        <div class="page" data-density="hard">
+          <SumarioPagina
+            edicoes={edicoes}
+            edicaoAtualSlug={edicao.slug}
+            sumarioPageIndex={SUMARIO_PAGE}
+          />
+        </div>
+        {
+          edicao.paginas.map((pagina) => (
+            <div class="page">
+              <PaginaHQ pagina={pagina} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="scroll-mode" data-scroll-mode>
+      <div class="scroll-page" id="scroll-capa">
+        <CapaEdicao
+          titulo={edicao.titulo}
+          numero={edicao.numero}
+          totalPaginas={edicao.paginas.length}
+        />
+      </div>
+      <div class="scroll-page" id="scroll-sumario">
+        <SumarioPagina
+          edicoes={edicoes}
+          edicaoAtualSlug={edicao.slug}
+          sumarioPageIndex={SUMARIO_PAGE}
+        />
+      </div>
+      {
+        edicao.paginas.map((pagina) => (
+          <div class="scroll-page" id={`scroll-${pagina.id}`}>
+            <PaginaHQ pagina={pagina} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <ControlesNavegacao totalPaginas={totalFolhas} />
+</section>
+
+<script>
+  import { initLeitor } from '../scripts/page-flip';
+  initLeitor();
+</script>

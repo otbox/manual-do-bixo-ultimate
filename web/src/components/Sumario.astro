@@ -1,0 +1,77 @@
+---
+import type { EdicaoResumo } from '../types/hq';
+
+interface Props {
+  edicoes: EdicaoResumo[];
+  edicaoAtualSlug?: string;
+  /** Prefixo de âncora no modo scroll. */
+  anchorPrefix?: string;
+  /**
+   * Índice da página do sumário no flipbook (capa=0, sumário=1, conteúdo a partir de 2).
+   */
+  sumarioPageIndex?: number;
+  variant?: 'page' | 'drawer';
+}
+const {
+  edicoes,
+  edicaoAtualSlug,
+  anchorPrefix = 'scroll-',
+  sumarioPageIndex = 1,
+  variant = 'page',
+} = Astro.props;
+
+const contentOffset = sumarioPageIndex + 1; // primeira página de conteúdo
+---
+
+<nav
+  class:list={['sumario', `sumario--${variant}`]}
+  aria-label={variant === 'page' ? 'Página de sumário' : 'Sumário rápido'}
+>
+  <header class="sumario__head">
+    <p class="sumario__kicker">Mission briefing</p>
+    <h2 class="sumario__titulo">{variant === 'page' ? 'SUMÁRIO' : 'ÍNDICE'}</h2>
+    <p class="sumario__hint">Toque numa página · salte direto pro quadro</p>
+  </header>
+
+  <ul class="sumario__lista">
+    {
+      edicoes.map((edicao) => {
+        const ativa = edicao.slug === edicaoAtualSlug;
+        const hrefEdicao = `${import.meta.env.BASE_URL}edicao/${edicao.slug}/`;
+        return (
+          <li class:list={['sumario__edicao', { 'is-ativa': ativa }]}>
+            <a class="sumario__edicao-titulo" href={hrefEdicao} aria-current={ativa ? 'page' : undefined}>
+              <span class="sumario__num">#{String(edicao.numero).padStart(2, '0')}</span>
+              <span>{edicao.titulo}</span>
+            </a>
+            {ativa && (
+              <ol class="sumario__paginas">
+                <li>
+                  <button type="button" data-goto-page="0">
+                    <span class="sumario__pg">00</span> Capa
+                  </button>
+                </li>
+                <li>
+                  <button type="button" data-goto-page={String(sumarioPageIndex)}>
+                    <span class="sumario__pg">{String(sumarioPageIndex).padStart(2, '0')}</span> Sumário
+                  </button>
+                </li>
+                {edicao.paginas.map((pagina, index) => (
+                  <li>
+                    <a
+                      href={`#${anchorPrefix}${pagina.id}`}
+                      data-goto-page={String(index + contentOffset)}
+                    >
+                      <span class="sumario__pg">{String(index + contentOffset).padStart(2, '0')}</span>
+                      {pagina.titulo}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
