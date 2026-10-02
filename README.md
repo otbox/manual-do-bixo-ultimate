@@ -6,6 +6,8 @@ Manual satírico para calouros da Unicamp, escrito em markdown como base para a 
 
 O Manual do Bixo Ultimate organiza e reescreve o conhecimento acumulado dos manuais históricos da Unicamp em documentos markdown independentes, com voz própria: um veterano contando diretamente pro calouro as coisas como elas são — serviços da universidade, macetes de sobrevivência, burocracias e vida acadêmica — com humor e respeito.
 
+A versão web terá formato de **revista em quadrinhos folheável** (page-flip, sumário, balões de fala). Detalhes em [docs/06-versao-web.md](docs/06-versao-web.md).
+
 ## Estrutura do repositório
 
 ```
@@ -23,6 +25,7 @@ O Manual do Bixo Ultimate organiza e reescreve o conhecimento acumulado dos manu
 | [docs/03-referencias-historicas.md](docs/03-referencias-historicas.md) | Síntese dos manuais históricos (2013, CDI 2024) |
 | [docs/04-padrao-markdown-web.md](docs/04-padrao-markdown-web.md) | Convenções de markdown para a versão web |
 | [docs/05-fluxo-de-trabalho.md](docs/05-fluxo-de-trabalho.md) | Fluxo de produção dos capítulos |
+| [docs/06-versao-web.md](docs/06-versao-web.md) | Conceito da versão web (HQ folheável) + prompt de geração |
 
 ## Fontes de referência
 
