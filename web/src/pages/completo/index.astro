@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FlipBookContinuo from '../../components/FlipBookContinuo.astro';
+import { loadAllEdicoes } from '../../utils/load-capitulos';
+
+const edicoes = loadAllEdicoes();
+---
+
+<BaseLayout title="Volume completo" chrome="immersive" badge="VOLUME">
+  <FlipBookContinuo edicoes={edicoes} />
+</BaseLayout>

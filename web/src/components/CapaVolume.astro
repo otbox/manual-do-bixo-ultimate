@@ -1,0 +1,32 @@
+---
+interface Props {
+  totalEdicoes: number;
+  totalPaginas: number;
+}
+const { totalEdicoes, totalPaginas } = Astro.props;
+---
+
+<article class="capa capa--volume capa-motivo--slash" aria-label="Capa do volume completo">
+  <div class="capa__halftone" aria-hidden="true"></div>
+  <div class="capa__motif" aria-hidden="true"></div>
+  <div class="capa__slash" aria-hidden="true"></div>
+
+  <div class="capa__top">
+    <span class="capa__selo">MANUAL DO BIXO</span>
+    <span class="capa__issue">VOLUME COMPLETO</span>
+  </div>
+
+  <div class="capa__hero">
+    <p class="capa__tagline">TODAS AS EDIÇÕES · SEM CORTAR</p>
+    <h1 class="capa__titulo">Ultimate — Contínuo</h1>
+    <p class="capa__subtitulo">
+      Folheie o manual inteiro: um capítulo atrás do outro, sem voltar pra lista.
+    </p>
+    <span class="capa__estampa">LER TUDO</span>
+  </div>
+
+  <footer class="capa__rodape">
+    <span class="capa__badge">{totalEdicoes} EDIÇÕES · {totalPaginas} QUADROS</span>
+    <span class="capa__cta">VIRE →</span>
+  </footer>
+</article>

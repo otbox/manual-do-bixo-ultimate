@@ -1,0 +1,20 @@
+---
+import type { EdicaoResumo } from '../types/hq';
+import SumarioContinuo from './SumarioContinuo.astro';
+
+interface Props {
+  edicoes: (EdicaoResumo & { divisorIndex: number; paginaIndices: number[] })[];
+  sumarioPageIndex?: number;
+}
+const { edicoes, sumarioPageIndex = 1 } = Astro.props;
+---
+
+<article class="sumario-pagina" aria-label="Sumário do volume completo">
+  <div class="sumario-pagina__burst" aria-hidden="true"></div>
+  <SumarioContinuo
+    edicoes={edicoes}
+    sumarioPageIndex={sumarioPageIndex}
+    variant="page"
+  />
+  <p class="sumario-pagina__footer">Vire a página → o manual inteiro segue em sequência</p>
+</article>

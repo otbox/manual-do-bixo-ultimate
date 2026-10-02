@@ -1,13 +1,21 @@
 ---
+import { inlineMd } from '../utils/inline-md';
+
 interface Props {
   itens: string[];
+  /** Listas comuns viram DICA; MACETE só quando o heading pede. */
+  variante?: 'dica' | 'macete';
 }
-const { itens } = Astro.props;
+const { itens, variante = 'dica' } = Astro.props;
+const selo = variante === 'macete' ? 'MACETE!' : 'DICA!';
+const label = variante === 'macete' ? 'Macete' : 'Dica';
 ---
 
-<aside class="macete" aria-label="Macete">
-  <span class="macete__selo">MACETE!</span>
-  <ul class="macete__lista">
-    {itens.map((item) => <li>{item}</li>)}
+<aside class:list={['destaque', `destaque--${variante}`]} aria-label={label}>
+  <header class="destaque__cabecalho">
+    <span class="destaque__selo">{selo}</span>
+  </header>
+  <ul class="destaque__lista">
+    {itens.map((item) => <li set:html={inlineMd(item)} />)}
   </ul>
 </aside>

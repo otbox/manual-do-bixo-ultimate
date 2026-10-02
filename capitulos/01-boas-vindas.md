@@ -26,7 +26,7 @@ utilidade — ou perde a vaga na revisão.
 
 Cada capítulo é uma edição da HQ. Tem sumário, virada de página e modo
 rolagem. Os próximos volumes cobrem cidade, campus, serviços, burocracia,
-organizações, permanência, sobrevivência acadêmica, calourada e movimento.
+organizações, permanência, sobrevivência acadêmica, calourada e links úteis.
 
 - Confirma matrícula e documentação no prazo do edital. Sumir do portal cancela a vaga.
 - Ativa senha no e-DAC cedo: e-mail @dac, Moodle, Workspace e Eduroam andam juntos.

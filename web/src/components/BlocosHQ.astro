@@ -1,0 +1,27 @@
+---
+import type { Bloco } from '../types/hq';
+import { inlineMd } from '../utils/inline-md';
+import BalaoFala from './BalaoFala.astro';
+import CaixaMacete from './CaixaMacete.astro';
+import FiguraHQ from './FiguraHQ.astro';
+
+interface Props {
+  blocos: Bloco[];
+}
+const { blocos } = Astro.props;
+---
+
+{
+  blocos.map((bloco) => {
+    if (bloco.type === 'texto') {
+      return <p class="pagina-hq__texto" set:html={inlineMd(bloco.markdown)} />;
+    }
+    if (bloco.type === 'balao') {
+      return <BalaoFala texto={bloco.texto} />;
+    }
+    if (bloco.type === 'figura') {
+      return <FiguraHQ src={bloco.src} alt={bloco.alt} />;
+    }
+    return <CaixaMacete itens={bloco.itens} variante={bloco.type} />;
+  })
+}

@@ -1,15 +1,23 @@
 ---
+import { getCapaTema } from '../data/capas';
+
 interface Props {
   titulo: string;
   numero: number;
   totalPaginas: number;
+  slug?: string;
 }
 const { titulo, numero, totalPaginas } = Astro.props;
 const edicaoLabel = String(numero).padStart(2, '0');
+const capa = getCapaTema(numero);
 ---
 
-<article class="capa" aria-label={`Capa da edição ${edicaoLabel}: ${titulo}`}>
+<article
+  class:list={['capa', `capa--${capa.tema}`, `capa-motivo--${capa.motivo}`]}
+  aria-label={`Capa da edição ${edicaoLabel}: ${titulo}`}
+>
   <div class="capa__halftone" aria-hidden="true"></div>
+  <div class="capa__motif" aria-hidden="true"></div>
   <div class="capa__slash" aria-hidden="true"></div>
 
   <div class="capa__top">
@@ -18,9 +26,10 @@ const edicaoLabel = String(numero).padStart(2, '0');
   </div>
 
   <div class="capa__hero">
-    <p class="capa__tagline">ORIGEM · CALOURO · UNICAMP</p>
+    <p class="capa__tagline">{capa.tagline}</p>
     <h1 class="capa__titulo">{titulo}</h1>
-    <p class="capa__subtitulo">A HQ satírica que o DAC não imprimiu</p>
+    <p class="capa__subtitulo">{capa.subtitulo}</p>
+    <span class="capa__estampa">{capa.estampa}</span>
   </div>
 
   <footer class="capa__rodape">

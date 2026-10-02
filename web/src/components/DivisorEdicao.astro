@@ -1,0 +1,25 @@
+---
+import type { Edicao } from '../types/hq';
+import { getCapaTema } from '../data/capas';
+
+interface Props {
+  edicao: Edicao;
+}
+const { edicao } = Astro.props;
+const capa = getCapaTema(edicao.numero);
+const label = String(edicao.numero).padStart(2, '0');
+---
+
+<article
+  class:list={['divisor-edicao', `capa--${capa.tema}`]}
+  aria-label={`Início da edição ${label}: ${edicao.titulo}`}
+  data-edicao-slug={edicao.slug}
+>
+  <div class="divisor-edicao__inner">
+    <p class="divisor-edicao__kicker">PRÓXIMA EDIÇÃO</p>
+    <p class="divisor-edicao__num">ISSUE #{label}</p>
+    <h2 class="divisor-edicao__titulo">{edicao.titulo}</h2>
+    <p class="divisor-edicao__meta">{edicao.paginas.length} páginas · continue virando</p>
+    <span class="divisor-edicao__estampa">{capa.estampa}</span>
+  </div>
+</article>

@@ -11,7 +11,11 @@ updated: 2026-10-02
 - Conteúdo HQ: `web/src/content/capitulos/` (1 md = 1 edição; lido via `import.meta.glob`)
 - Capítulos fonte do manual (texto): `/capitulos` na raiz
 - Fontes PDF: `/fontes` (2013 CAT/FT, CDI 2024, edição Canva 2026)
-- Parse: `web/src/utils/parse-capitulo.ts` — `#` capa, `##` página, `###` panel, `>` balão, listas → MACETE!
+- Guia auxiliar: https://guia-sobrevivencia-ft.vercel.app (sintetizar)
+- Capítulos: `/capitulos/01`–`09` espelhados em `web/src/content/capitulos/`
+- Listas HQ: padrão **DICA!**; heading com "Macete" → **MACETE!** (raro/específico)
+- Parse: `web/src/utils/parse-capitulo.ts` — `#` capa, `##` página, `###` panel, `>` balão, listas → dica|macete
+
 - Componentes HQ em `web/src/components/` (CapaEdicao, PaginaHQ, Panel, BalaoFala, CaixaMacete, Sumario, ControlesNavegacao, FlipBook)
 - Modos: flip (default) + scroll (toggle); workflow `.github/workflows/deploy-web.yml`
 - Sem backend; 100% estático

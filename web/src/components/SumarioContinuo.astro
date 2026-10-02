@@ -1,0 +1,95 @@
+---
+import type { EdicaoResumo } from '../types/hq';
+
+interface Props {
+  edicoes: (EdicaoResumo & { divisorIndex: number; paginaIndices: number[] })[];
+  sumarioPageIndex?: number;
+  variant?: 'page' | 'drawer';
+  anchorPrefix?: string;
+}
+const {
+  edicoes,
+  sumarioPageIndex = 1,
+  variant = 'page',
+  anchorPrefix = 'scroll-',
+} = Astro.props;
+---
+
+<nav
+  class:list={['sumario', 'sumario--continuo', `sumario--${variant}`]}
+  aria-label="Sumário do volume completo"
+>
+  <header class="sumario__head">
+    <p class="sumario__kicker">Volume contínuo</p>
+    <h2 class="sumario__titulo">{variant === 'page' ? 'SUMÁRIO' : 'ÍNDICE'}</h2>
+    <p class="sumario__hint">Todas as edições em sequência · toque pra saltar</p>
+  </header>
+
+  <ul class="sumario__lista">
+    {
+      variant === 'drawer' && (
+        <li class="sumario__edicao is-ativa">
+          <ol class="sumario__paginas">
+            <li>
+              <button type="button" data-goto-page="0">
+                <span class="sumario__pg">00</span> Capa do volume
+              </button>
+            </li>
+            <li>
+              <button type="button" data-goto-page={String(sumarioPageIndex)}>
+                <span class="sumario__pg">{String(sumarioPageIndex).padStart(2, '0')}</span>{' '}
+                Este sumário
+              </button>
+            </li>
+          </ol>
+        </li>
+      )
+    }
+    {
+      edicoes.map((edicao) => (
+        <li class="sumario__edicao is-ativa">
+          <button
+            type="button"
+            class="sumario__edicao-titulo sumario__edicao-titulo--btn"
+            data-goto-page={String(edicao.divisorIndex)}
+          >
+            <span class="sumario__num">#{String(edicao.numero).padStart(2, '0')}</span>
+            <span>{edicao.titulo}</span>
+            {variant === 'page' && (
+              <span class="sumario__count">{edicao.paginas.length} págs</span>
+            )}
+          </button>
+          {
+            variant === 'drawer' && (
+              <ol class="sumario__paginas">
+                <li>
+                  <a
+                    href={`#${anchorPrefix}div-${edicao.slug}`}
+                    data-goto-page={String(edicao.divisorIndex)}
+                  >
+                    <span class="sumario__pg">{String(edicao.divisorIndex).padStart(2, '0')}</span>
+                    Abertura da edição
+                  </a>
+                </li>
+                {edicao.paginas.map((pagina, i) => {
+                  const pageIndex = edicao.paginaIndices[i] ?? 0;
+                  return (
+                    <li>
+                      <a
+                        href={`#${anchorPrefix}${edicao.slug}-${pagina.id}`}
+                        data-goto-page={String(pageIndex)}
+                      >
+                        <span class="sumario__pg">{String(pageIndex).padStart(2, '0')}</span>
+                        {pagina.titulo}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ol>
+            )
+          }
+        </li>
+      ))
+    }
+  </ul>
+</nav>

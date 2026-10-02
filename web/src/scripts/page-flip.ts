@@ -116,11 +116,8 @@ export function initLeitor(): void {
       pageFlip?.flip(index, 'bottom');
       return;
     }
-    const ids = ['scroll-capa', 'scroll-sumario'];
-    const el =
-      document.getElementById(ids[index] ?? '') ??
-      document.querySelectorAll('.scroll-page')[index];
-    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const pages = root.querySelectorAll('.scroll-page');
+    pages[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const setMode = (next: 'flip' | 'scroll') => {

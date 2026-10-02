@@ -149,7 +149,7 @@ h3,
   border-top: 2px solid #243043;
 }
 
-/* —— Capa (splash hero) —— */
+/* —— Capa (splash por edição) —— */
 .capa {
   position: relative;
   height: 100%;
@@ -159,8 +159,7 @@ h3,
   justify-content: space-between;
   padding: clamp(1rem, 3vw, 1.75rem);
   overflow: hidden;
-  background:
-    linear-gradient(160deg, #ff3b30 0%, #e10600 38%, #7a0018 100%);
+  background: linear-gradient(160deg, #ff3b30 0%, #e10600 38%, #7a0018 100%);
   color: #fff;
   border: 6px solid #000;
 }
@@ -173,6 +172,15 @@ h3,
   opacity: 0.35;
   pointer-events: none;
   mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+.capa__motif {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
 }
 
 .capa__slash {
@@ -183,6 +191,7 @@ h3,
   transform: skewY(-11deg);
   box-shadow: 0 8px 0 #000;
   pointer-events: none;
+  z-index: 0;
 }
 
 .capa__top,
@@ -222,7 +231,7 @@ h3,
 }
 
 .capa__hero {
-  margin: 2.5rem 0 1rem;
+  margin: 2.2rem 0 1rem;
   text-align: left;
 }
 
@@ -230,30 +239,45 @@ h3,
   margin: 0 0 0.4rem;
   font-family: var(--fonte-condensed);
   font-weight: 700;
-  letter-spacing: 0.18em;
-  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
   color: #000;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   display: inline-block;
   padding: 0.15rem 0.45rem;
+  max-width: 100%;
 }
 
 .capa__titulo {
   margin: 0;
-  font-size: clamp(2.6rem, 10vw, 4.6rem);
+  font-size: clamp(2.35rem, 9vw, 4.2rem);
   color: #fff;
   text-shadow:
     4px 4px 0 #000,
     -2px 0 0 var(--hero-cyan);
-  max-width: 12ch;
+  max-width: 14ch;
 }
 
 .capa__subtitulo {
   margin: 0.75rem 0 0;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 600;
   color: #ffe9a8;
-  max-width: 28ch;
+  max-width: 30ch;
+}
+
+.capa__estampa {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--fonte-display);
+  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  letter-spacing: 0.06em;
+  color: #000;
+  background: var(--hero-yellow);
+  border: 4px solid #000;
+  padding: 0.2rem 0.65rem;
+  transform: rotate(-6deg);
+  box-shadow: 4px 4px 0 #000;
 }
 
 .capa__rodape {
@@ -294,6 +318,278 @@ h3,
   }
 }
 
+/* Temas de capa por edição */
+.capa--boas {
+  background: linear-gradient(155deg, #ff3b30 0%, #e10600 42%, #5c0012 100%);
+}
+.capa--campus {
+  background: linear-gradient(155deg, #1a6bff 0%, #0057ff 40%, #062a6e 100%);
+}
+.capa--campus .capa__subtitulo {
+  color: #cfe0ff;
+}
+.capa--campus .capa__estampa {
+  background: var(--hero-cyan);
+}
+.capa--servicos {
+  background: linear-gradient(155deg, #00c2a8 0%, #008f7a 45%, #034d42 100%);
+}
+.capa--servicos .capa__subtitulo {
+  color: #d7fff6;
+}
+.capa--servicos .capa__estampa {
+  background: #fff;
+  color: #034d42;
+}
+.capa--burocracia {
+  background: linear-gradient(155deg, #5b6578 0%, #2f3645 48%, #12151c 100%);
+}
+.capa--burocracia .capa__subtitulo {
+  color: #d5dae6;
+}
+.capa--burocracia .capa__estampa {
+  background: #fff;
+  color: #12151c;
+}
+.capa--orgs {
+  background: linear-gradient(155deg, #7b2cbf 0%, #5a189a 42%, #240046 100%);
+}
+.capa--orgs .capa__subtitulo {
+  color: #ebd9ff;
+}
+.capa--orgs .capa__estampa {
+  background: var(--hero-yellow);
+}
+.capa--permanencia {
+  background: linear-gradient(155deg, #2a9d8f 0%, #1d6f66 45%, #0b3d38 100%);
+}
+.capa--permanencia .capa__subtitulo {
+  color: #c8f5ef;
+}
+.capa--permanencia .capa__estampa {
+  background: #fff;
+  color: #0b3d38;
+}
+.capa--sobrevivencia {
+  background: linear-gradient(155deg, #ffb703 0%, #fb8500 42%, #9a3412 100%);
+}
+.capa--sobrevivencia .capa__subtitulo {
+  color: #fff3d6;
+}
+.capa--sobrevivencia .capa__titulo {
+  text-shadow:
+    4px 4px 0 #000,
+    -2px 0 0 #fff;
+}
+.capa--calourada {
+  background: linear-gradient(155deg, #ff006e 0%, #8338ec 48%, #3a0ca3 100%);
+}
+.capa--calourada .capa__subtitulo {
+  color: #ffe3f1;
+}
+.capa--calourada .capa__estampa {
+  background: var(--hero-cyan);
+}
+.capa--movimento {
+  background: linear-gradient(155deg, #ef233c 0%, #d90429 40%, #2b2d42 100%);
+}
+.capa--movimento .capa__subtitulo {
+  color: #ffd6db;
+}
+.capa--links {
+  background: linear-gradient(155deg, #0ea5e9 0%, #0369a1 42%, #0c4a6e 100%);
+}
+.capa--links .capa__subtitulo {
+  color: #e0f2fe;
+}
+.capa--links .capa__estampa {
+  background: #fff;
+  color: #0c4a6e;
+}
+
+.capa--volume {
+  background: linear-gradient(155deg, #111827 0%, #1f2937 38%, #0b0d12 100%);
+}
+.capa--volume .capa__tagline {
+  color: var(--hero-cyan);
+}
+.capa--volume .capa__estampa {
+  background: var(--hero-cyan);
+  color: #000;
+}
+
+/* Divisor entre edições no volume contínuo */
+.divisor-edicao {
+  height: 100%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  border: 4px solid #000;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.divisor-edicao__inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 22rem;
+}
+
+.divisor-edicao__kicker {
+  margin: 0;
+  font-family: var(--fonte-condensed);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.divisor-edicao__num {
+  margin: 0.6rem 0 0;
+  font-family: var(--fonte-condensed);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--hero-cyan);
+  font-size: 1.1rem;
+}
+
+.divisor-edicao__titulo {
+  margin: 0.5rem 0 0;
+  font-family: var(--fonte-display);
+  font-size: clamp(2rem, 7vw, 3.2rem);
+  letter-spacing: 0.04em;
+  text-shadow: 3px 3px 0 #000;
+}
+
+.divisor-edicao__meta {
+  margin: 0.75rem 0 0;
+  font-weight: 600;
+  color: #ffe9a8;
+}
+
+.divisor-edicao__estampa {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-family: var(--fonte-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  background: var(--hero-yellow);
+  color: #000;
+  border: 3px solid #000;
+  padding: 0.2rem 0.55rem;
+  transform: rotate(-4deg);
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* Motivos decorativos */
+.capa-motivo--slash .capa__motif {
+  display: none;
+}
+
+.capa-motivo--grid .capa__slash {
+  background: linear-gradient(90deg, #00e5ff, #ffffff);
+}
+.capa-motivo--grid .capa__motif {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.18) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 2px, transparent 2px);
+  background-size: 42px 42px;
+  opacity: 0.35;
+}
+
+.capa-motivo--radar .capa__slash {
+  height: 28%;
+  inset: 55% -10% auto;
+  transform: skewY(8deg);
+  background: linear-gradient(90deg, #fff, #9effe8);
+}
+.capa-motivo--radar .capa__motif {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.35) 0 8%, transparent 9%),
+    radial-gradient(circle at 80% 20%, transparent 18%, rgba(255, 255, 255, 0.2) 19% 20%, transparent 21%),
+    radial-gradient(circle at 80% 20%, transparent 32%, rgba(255, 255, 255, 0.15) 33% 34%, transparent 35%);
+}
+
+.capa-motivo--forms .capa__slash {
+  display: none;
+}
+.capa-motivo--forms .capa__motif {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 28px,
+      rgba(255, 255, 255, 0.12) 28px 30px
+    );
+  opacity: 0.7;
+}
+
+.capa-motivo--guild .capa__slash {
+  background: linear-gradient(90deg, #ffd400, #ff9e00);
+  inset: 18% -25% auto;
+  transform: skewY(-16deg);
+}
+.capa-motivo--guild .capa__motif {
+  background:
+    radial-gradient(circle at 15% 80%, rgba(255, 212, 0, 0.45) 0 12%, transparent 13%),
+    radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.2) 0 9%, transparent 10%);
+}
+
+.capa-motivo--shield .capa__slash {
+  background: linear-gradient(90deg, #e9ffdb, #90ee90);
+  transform: skewY(6deg);
+  inset: 40% -15% auto;
+  height: 22%;
+}
+.capa-motivo--shield .capa__motif {
+  background:
+    linear-gradient(135deg, transparent 46%, rgba(255, 255, 255, 0.22) 46% 54%, transparent 54%);
+}
+
+.capa-motivo--alert .capa__slash {
+  background: linear-gradient(90deg, #000, #111);
+  height: 18%;
+  inset: 8% -10% auto;
+  transform: skewY(-4deg);
+  opacity: 0.35;
+}
+.capa-motivo--alert .capa__motif {
+  background:
+    repeating-linear-gradient(
+      -28deg,
+      rgba(0, 0, 0, 0.22) 0 14px,
+      transparent 14px 28px
+    );
+  opacity: 0.55;
+}
+
+.capa-motivo--party .capa__slash {
+  background: linear-gradient(90deg, #00e5ff, #ffd400, #ff006e);
+  height: 30%;
+}
+.capa-motivo--party .capa__motif {
+  background:
+    radial-gradient(circle at 20% 30%, #fff 0 3px, transparent 4px),
+    radial-gradient(circle at 70% 20%, #ffd400 0 4px, transparent 5px),
+    radial-gradient(circle at 40% 70%, #00e5ff 0 3px, transparent 4px),
+    radial-gradient(circle at 85% 65%, #fff 0 5px, transparent 6px);
+  opacity: 0.9;
+}
+
+.capa-motivo--megaphone .capa__slash {
+  background: linear-gradient(90deg, #ffd400, #fff);
+  transform: skewY(-18deg);
+  inset: 22% -30% auto;
+}
+.capa-motivo--megaphone .capa__motif {
+  background:
+    linear-gradient(105deg, transparent 58%, rgba(0, 0, 0, 0.28) 58% 62%, transparent 62%),
+    linear-gradient(105deg, transparent 68%, rgba(255, 255, 255, 0.18) 68% 70%, transparent 70%);
+}
+
 /* —— Página HQ —— */
 .pagina-hq {
   height: 100%;
@@ -306,6 +602,8 @@ h3,
   flex-direction: column;
   gap: var(--gutter);
   overflow: auto;
+  overflow-x: hidden;
+  min-width: 0;
 }
 
 .pagina-hq__titulo {
@@ -324,11 +622,25 @@ h3,
   flex-direction: column;
   gap: var(--gutter);
   flex: 1;
+  min-width: 0;
 }
 
 .pagina-hq__texto {
   margin: 0;
   font-size: 0.98rem;
+}
+
+.pagina-hq__texto a,
+.destaque__lista a {
+  color: var(--hero-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pagina-hq__texto a:hover,
+.destaque__lista a:hover {
+  color: var(--hero-red);
 }
 
 .pagina-hq__texto code {
@@ -338,16 +650,53 @@ h3,
   border: 1px solid #000;
 }
 
+/* —— Figuras / tirinhas —— */
+.figura-hq {
+  margin: 0.35rem 0;
+  padding: 0;
+  border: 4px solid #000;
+  background: #fff;
+  box-shadow: 4px 4px 0 #000;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.figura-hq--tirinha {
+  border-width: 5px;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.35);
+}
+
+.figura-hq__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.figura-hq__legenda {
+  margin: 0;
+  padding: 0.35rem 0.55rem;
+  font-family: var(--fonte-condensed);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #000;
+  color: var(--hero-yellow);
+}
+
 /* —— Panel —— */
 .panel {
   border: 5px solid #000;
   background: var(--panel);
-  padding: 0.8rem;
+  padding: 0.95rem 0.8rem 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.35);
   position: relative;
+  overflow: visible;
+  min-width: 0;
 }
 
 .panel::before {
@@ -429,29 +778,89 @@ h3,
   border-top: 12px solid #fff;
 }
 
-/* —— MACETE —— */
-.macete {
-  position: relative;
-  background: var(--hero-yellow);
+/* —— Caixas DICA / MACETE —— */
+.destaque {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   border: 4px solid #000;
-  padding: 1.15rem 0.85rem 0.85rem;
-  box-shadow: 5px 5px 0 #000;
-  clip-path: polygon(0 8%, 8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%);
+  padding: 0.65rem 0.75rem 0.75rem;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.destaque--dica {
+  background: #e8f1ff;
+}
+
+.destaque--macete {
+  background: var(--hero-yellow);
+}
+
+.destaque__cabecalho {
+  display: flex;
+  justify-content: flex-end;
+  margin: -0.15rem -0.15rem 0 0;
+}
+
+.destaque__selo {
+  display: inline-block;
+  color: #fff;
+  font-family: var(--fonte-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  border: 3px solid #000;
+  transform: rotate(3deg);
+  text-shadow: 1px 1px 0 #000;
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
+.destaque--dica .destaque__selo {
+  background: var(--hero-blue);
+  transform: rotate(-2deg);
+}
+
+.destaque--macete .destaque__selo {
+  background: var(--hero-red);
+}
+
+.destaque__lista {
+  margin: 0;
+  padding: 0 0.1rem 0 1.15rem;
+  font-weight: 600;
+  min-width: 0;
+}
+
+.destaque__lista li {
+  margin: 0.3rem 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* legado */
+.macete {
+  border: 4px solid #000;
+  padding: 0.75rem;
+  max-width: 100%;
+  background: var(--hero-yellow);
+  box-shadow: 3px 3px 0 #000;
 }
 
 .macete__selo {
-  position: absolute;
-  top: -0.75rem;
-  right: 0.6rem;
+  display: inline-block;
   background: var(--hero-red);
   color: #fff;
   font-family: var(--fonte-display);
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  padding: 0.2rem 0.55rem;
+  font-size: 0.9rem;
+  padding: 0.15rem 0.5rem;
   border: 3px solid #000;
-  transform: rotate(6deg);
-  text-shadow: 1px 1px 0 #000;
 }
 
 .macete__lista {
@@ -461,7 +870,9 @@ h3,
 }
 
 .macete__lista li {
-  margin: 0.28rem 0;
+  margin: 0.3rem 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* —— Sumário (página + drawer) —— */
@@ -564,6 +975,38 @@ h3,
 
 .sumario__edicao-titulo:hover {
   color: var(--hero-yellow);
+}
+
+.sumario__edicao-titulo--btn {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0.15rem 0;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+}
+
+.sumario__count {
+  margin-left: auto;
+  font-family: var(--fonte-condensed);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #9aa6bd;
+  text-transform: uppercase;
+}
+
+.sumario--continuo.sumario--page .sumario__lista {
+  gap: 0.4rem;
+}
+
+.sumario--continuo.sumario--page .sumario__edicao {
+  margin: 0;
+  padding: 0.35rem 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .sumario__num {
@@ -782,6 +1225,16 @@ h3,
 
 .hq-book .page {
   background: var(--paper);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hq-book .page > .pagina-hq,
+.hq-book .page > .capa,
+.hq-book .page > .sumario-pagina {
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
 }
 
 .flip-mode {
@@ -862,9 +1315,78 @@ h3,
   color: #c3cad8;
 }
 
+.volume-cta {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.35rem;
+  text-decoration: none;
+  color: #fff;
+  background:
+    linear-gradient(125deg, #0f172a 0%, #1e293b 45%, #111827 100%);
+  border: 4px solid #000;
+  outline: 3px solid var(--hero-cyan);
+  outline-offset: -7px;
+  position: relative;
+  transition: transform 0.15s ease;
+}
+
+.volume-cta:hover {
+  transform: translate(-3px, -3px);
+  color: #fff;
+  outline-color: var(--hero-yellow);
+}
+
+.volume-cta__badge {
+  display: inline-block;
+  font-family: var(--fonte-condensed);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  background: var(--hero-red);
+  color: #fff;
+  border: 2px solid #000;
+  padding: 0.15rem 0.45rem;
+}
+
+.volume-cta__titulo {
+  margin: 0.55rem 0 0;
+  font-family: var(--fonte-display);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  color: var(--hero-yellow);
+  text-shadow: 2px 2px 0 #000;
+}
+
+.volume-cta__texto {
+  margin: 0.45rem 0 0;
+  max-width: 36rem;
+  color: #c3cad8;
+}
+
+.volume-cta__action {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-family: var(--fonte-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  color: #000;
+  background: var(--hero-cyan);
+  border: 3px solid #000;
+  padding: 0.2rem 0.6rem;
+}
+
+.home-edicoes-titulo {
+  margin: 2rem 0 0;
+  font-family: var(--fonte-condensed);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #9aa6bd;
+}
+
 .edicoes-lista {
   list-style: none;
-  margin: 1.5rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
   display: grid;
   gap: 1rem;
@@ -881,6 +1403,7 @@ h3,
   text-decoration: none;
   color: #fff;
   transition: transform 0.15s ease;
+  position: relative;
 }
 
 .edicao-card:hover {
@@ -897,16 +1420,72 @@ h3,
   font-size: 0.9rem;
 }
 
+.edicao-card__estampa {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  font-family: var(--fonte-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  background: var(--hero-yellow);
+  color: #000;
+  border: 2px solid #000;
+  padding: 0.1rem 0.4rem;
+  transform: rotate(4deg);
+}
+
 .edicao-card__titulo {
   margin: 0.3rem 0 0;
   font-family: var(--fonte-display);
   font-size: 1.7rem;
   color: var(--hero-yellow);
+  padding-right: 4.5rem;
+}
+
+.edicao-card__tagline {
+  margin: 0.35rem 0 0 !important;
+  font-family: var(--fonte-condensed);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: #c5d0e6 !important;
+  text-transform: uppercase;
 }
 
 .edicao-card p {
   margin: 0.35rem 0 0;
   color: #9aa6bd;
+}
+
+.edicao-card--boas {
+  outline-color: #e10600;
+}
+.edicao-card--campus {
+  outline-color: #0057ff;
+}
+.edicao-card--servicos {
+  outline-color: #00c2a8;
+}
+.edicao-card--burocracia {
+  outline-color: #8b95a8;
+}
+.edicao-card--orgs {
+  outline-color: #7b2cbf;
+}
+.edicao-card--permanencia {
+  outline-color: #2a9d8f;
+}
+.edicao-card--sobrevivencia {
+  outline-color: #fb8500;
+}
+.edicao-card--calourada {
+  outline-color: #ff006e;
+}
+.edicao-card--movimento {
+  outline-color: #d90429;
+}
+.edicao-card--links {
+  outline-color: #0ea5e9;
 }
 
 @media (max-width: 720px) {
@@ -929,6 +1508,7 @@ h3,
   .capa__cta,
   .marcador,
   .edicao-card,
+  .volume-cta,
   .sumario__paginas a,
   .sumario__paginas button {
     animation: none;

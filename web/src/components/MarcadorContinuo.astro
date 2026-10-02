@@ -1,0 +1,38 @@
+---
+import type { EdicaoResumo } from '../types/hq';
+import SumarioContinuo from './SumarioContinuo.astro';
+
+interface Props {
+  edicoes: (EdicaoResumo & { divisorIndex: number; paginaIndices: number[] })[];
+  sumarioPageIndex?: number;
+}
+const { edicoes, sumarioPageIndex = 1 } = Astro.props;
+---
+
+<aside class="marcador" data-marcador>
+  <button
+    type="button"
+    class="marcador__aba"
+    data-action="toggle-marcador"
+    aria-expanded="false"
+    aria-controls="marcador-painel-continuo"
+  >
+    <span class="marcador__aba-texto">SUMÁRIO</span>
+  </button>
+
+  <div class="marcador__painel" id="marcador-painel-continuo" data-marcador-painel>
+    <button
+      type="button"
+      class="marcador__goto"
+      data-action="goto-sumario"
+      data-goto-page={String(sumarioPageIndex)}
+    >
+      ★ Voltar ao sumário
+    </button>
+    <SumarioContinuo
+      edicoes={edicoes}
+      sumarioPageIndex={sumarioPageIndex}
+      variant="drawer"
+    />
+  </div>
+</aside>

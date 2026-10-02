@@ -1,0 +1,124 @@
+---
+import type { Edicao } from '../types/hq';
+import CapaVolume from './CapaVolume.astro';
+import DivisorEdicao from './DivisorEdicao.astro';
+import PaginaHQ from './PaginaHQ.astro';
+import SumarioPaginaContinuo from './SumarioPaginaContinuo.astro';
+import MarcadorContinuo from './MarcadorContinuo.astro';
+import ControlesNavegacao from './ControlesNavegacao.astro';
+import {
+  buildVolumeContinuo,
+  resumosComIndices,
+  totalPaginasConteudo,
+} from '../utils/volume-continuo';
+
+interface Props {
+  edicoes: Edicao[];
+}
+const { edicoes } = Astro.props;
+const volume = buildVolumeContinuo(edicoes);
+const resumos = resumosComIndices(edicoes, volume);
+const totalQuadros = totalPaginasConteudo(edicoes);
+---
+
+<section
+  class="leitor"
+  data-leitor
+  data-mode="flip"
+  data-sumario-page={volume.sumarioPageIndex}
+  data-volume="continuo"
+>
+  <MarcadorContinuo edicoes={resumos} sumarioPageIndex={volume.sumarioPageIndex} />
+
+  <div class="leitor__stage">
+    <div class="flip-mode" data-flip-mode>
+      <div class="hq-book" data-hq-book>
+        {
+          volume.folhas.map((folha) => {
+            if (folha.kind === 'capa-geral') {
+              return (
+                <div class="page" data-density="hard">
+                  <CapaVolume
+                    totalEdicoes={edicoes.length}
+                    totalPaginas={totalQuadros}
+                  />
+                </div>
+              );
+            }
+            if (folha.kind === 'sumario') {
+              return (
+                <div class="page" data-density="hard">
+                  <SumarioPaginaContinuo
+                    edicoes={resumos}
+                    sumarioPageIndex={volume.sumarioPageIndex}
+                  />
+                </div>
+              );
+            }
+            if (folha.kind === 'divisor') {
+              return (
+                <div class="page" data-density="hard">
+                  <DivisorEdicao edicao={folha.edicao} />
+                </div>
+              );
+            }
+            return (
+              <div class="page">
+                <PaginaHQ pagina={folha.pagina} />
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <div class="scroll-mode" data-scroll-mode>
+      {
+        volume.folhas.map((folha) => {
+          if (folha.kind === 'capa-geral') {
+            return (
+              <div class="scroll-page" id="scroll-capa">
+                <CapaVolume
+                  totalEdicoes={edicoes.length}
+                  totalPaginas={totalQuadros}
+                />
+              </div>
+            );
+          }
+          if (folha.kind === 'sumario') {
+            return (
+              <div class="scroll-page" id="scroll-sumario">
+                <SumarioPaginaContinuo
+                  edicoes={resumos}
+                  sumarioPageIndex={volume.sumarioPageIndex}
+                />
+              </div>
+            );
+          }
+          if (folha.kind === 'divisor') {
+            return (
+              <div class="scroll-page" id={`scroll-div-${folha.edicao.slug}`}>
+                <DivisorEdicao edicao={folha.edicao} />
+              </div>
+            );
+          }
+          return (
+            <div
+              class="scroll-page"
+              id={`scroll-${folha.edicao.slug}-${folha.pagina.id}`}
+            >
+              <PaginaHQ pagina={folha.pagina} />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+
+  <ControlesNavegacao totalPaginas={volume.totalFolhas} />
+</section>
+
+<script>
+  import { initLeitor } from '../scripts/page-flip';
+  initLeitor();
+</script>

@@ -1,8 +1,6 @@
 ---
 import type { PaginaHQ as PaginaHQType } from '../types/hq';
-import { inlineMd } from '../utils/inline-md';
-import BalaoFala from './BalaoFala.astro';
-import CaixaMacete from './CaixaMacete.astro';
+import BlocosHQ from './BlocosHQ.astro';
 import Panel from './Panel.astro';
 
 interface Props {
@@ -15,17 +13,7 @@ const { pagina, anchorId } = Astro.props;
 <article class="pagina-hq" id={anchorId} data-page-id={pagina.id}>
   <h2 class="pagina-hq__titulo">{pagina.titulo}</h2>
   <div class="pagina-hq__corpo">
-    {
-      pagina.blocos.map((bloco) => {
-        if (bloco.type === 'texto') {
-          return <p class="pagina-hq__texto" set:html={inlineMd(bloco.markdown)} />;
-        }
-        if (bloco.type === 'balao') {
-          return <BalaoFala texto={bloco.texto} />;
-        }
-        return <CaixaMacete itens={bloco.itens} />;
-      })
-    }
+    <BlocosHQ blocos={pagina.blocos} />
     {pagina.panels.map((panel) => <Panel titulo={panel.titulo} blocos={panel.blocos} />)}
   </div>
 </article>

@@ -33,6 +33,12 @@ Arquivo: [`fontes/manual-do-bixo-2026.pdf`](../fontes/manual-do-bixo-2026.pdf)
 
 Referência de estética e leveza (linha principal do tom em [01-estilo-e-tom.md](./01-estilo-e-tom.md)). Usar como norte visual/ritmo de leitura, não como texto a copiar.
 
+## Fontes auxiliares atuais
+
+- PDFs em [`fontes/`](../fontes/README.md) (2013, CDI 2024, Manual 2026 — base principal de tom/conteúdo da introdução e campus).
+- Guia auxiliar de colega: [guia-sobrevivencia-ft.vercel.app](https://guia-sobrevivencia-ft.vercel.app) (calouros, DAC, campus, acadêmico) — sintetizar, não colar.
+
 ## Regra de uso
 
 Sintetizar e reescrever com voz própria. Citação direta só em casos excepcionais e sinalizados.
+

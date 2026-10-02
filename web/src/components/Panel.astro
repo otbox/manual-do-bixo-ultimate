@@ -1,8 +1,6 @@
 ---
 import type { Bloco } from '../types/hq';
-import { inlineMd } from '../utils/inline-md';
-import BalaoFala from './BalaoFala.astro';
-import CaixaMacete from './CaixaMacete.astro';
+import BlocosHQ from './BlocosHQ.astro';
 
 interface Props {
   titulo: string;
@@ -13,15 +11,5 @@ const { titulo, blocos } = Astro.props;
 
 <section class="panel">
   <h3 class="panel__titulo">{titulo}</h3>
-  {
-    blocos.map((bloco) => {
-      if (bloco.type === 'texto') {
-        return <p class="pagina-hq__texto" set:html={inlineMd(bloco.markdown)} />;
-      }
-      if (bloco.type === 'balao') {
-        return <BalaoFala texto={bloco.texto} />;
-      }
-      return <CaixaMacete itens={bloco.itens} />;
-    })
-  }
+  <BlocosHQ blocos={blocos} />
 </section>

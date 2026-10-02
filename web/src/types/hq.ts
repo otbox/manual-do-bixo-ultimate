@@ -1,7 +1,9 @@
 export type Bloco =
   | { type: 'texto'; markdown: string }
   | { type: 'balao'; texto: string }
-  | { type: 'macete'; itens: string[] };
+  | { type: 'dica'; itens: string[] }
+  | { type: 'macete'; itens: string[] }
+  | { type: 'figura'; src: string; alt: string };
 
 export type PanelHQ = {
   id: string;

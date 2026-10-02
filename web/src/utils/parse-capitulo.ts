@@ -18,9 +18,9 @@ function stripFrontmatter(raw: string): string {
   return raw.slice(end + 4).replace(/^\s+/, '');
 }
 
-function flushList(alvo: Alvo, itens: string[]) {
+function flushList(alvo: Alvo, itens: string[], kind: 'dica' | 'macete') {
   if (itens.length === 0) return;
-  alvo.blocos.push({ type: 'macete', itens: [...itens] });
+  alvo.blocos.push({ type: kind, itens: [...itens] });
   itens.length = 0;
 }
 
@@ -33,7 +33,8 @@ function flushParagraph(alvo: Alvo, lines: string[]) {
 
 /**
  * Converte Markdown GFM do capítulo no modelo tipado da HQ.
- * `#` capa · `##` página · `###` panel · `>` balão · listas → MACETE!
+ * `#` capa · `##` página · `###` panel · `>` balão
+ * Listas → DICA! (padrão). Heading com "macete" → MACETE! (só o específico).
  * Conteúdo entre `#` e o primeiro `##` é anexado à primeira página.
  */
 export function parseCapitulo(raw: string, fileSlug: string): Edicao {
@@ -50,6 +51,8 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
 
   let paginaAtual: PaginaHQ | null = null;
   let panelAtual: PanelHQ | null = null;
+  /** Listas herdam o tipo do último heading (##/###). */
+  let listKind: 'dica' | 'macete' = 'dica';
 
   const paraLines: string[] = [];
   const listItens: string[] = [];
@@ -70,7 +73,7 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
   const flushPending = () => {
     endQuote();
     const a = getAlvo();
-    flushList(a, listItens);
+    flushList(a, listItens, listKind);
     flushParagraph(a, paraLines);
   };
 
@@ -79,6 +82,10 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
     const copy = [...preamble];
     preamble.length = 0;
     return copy;
+  };
+
+  const setListKindFromHeading = (text: string) => {
+    listKind = /macete/i.test(text) ? 'macete' : 'dica';
   };
 
   for (const line of lines) {
@@ -95,6 +102,7 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
       }
 
       if (level === 2) {
+        setListKindFromHeading(text);
         paginaAtual = {
           id: slugify(text) || `pagina-${paginas.length + 1}`,
           titulo: text,
@@ -106,7 +114,8 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
         continue;
       }
 
-      // ### — se ainda não há ##, cria página a partir do título do panel
+      // ###
+      setListKindFromHeading(text);
       if (!paginaAtual) {
         paginaAtual = {
           id: 'abertura',
@@ -127,7 +136,7 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
     }
 
     if (/^>\s?/.test(line)) {
-      flushList(getAlvo(), listItens);
+      flushList(getAlvo(), listItens, listKind);
       flushParagraph(getAlvo(), paraLines);
       quoteLines.push(line.replace(/^>\s?/, ''));
       continue;
@@ -141,6 +150,18 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
       endQuote();
     }
 
+    const imagem = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(line.trim());
+    if (imagem) {
+      flushList(getAlvo(), listItens, listKind);
+      flushParagraph(getAlvo(), paraLines);
+      getAlvo().blocos.push({
+        type: 'figura',
+        alt: imagem[1].trim() || 'Ilustração',
+        src: imagem[2].trim(),
+      });
+      continue;
+    }
+
     const listItem = /^(?:[-*+]|\d+\.)\s+(.+)$/.exec(line);
     if (listItem) {
       flushParagraph(getAlvo(), paraLines);
@@ -149,11 +170,11 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
     }
 
     if (listItens.length > 0 && line.trim() === '') {
-      flushList(getAlvo(), listItens);
+      flushList(getAlvo(), listItens, listKind);
       continue;
     }
     if (listItens.length > 0) {
-      flushList(getAlvo(), listItens);
+      flushList(getAlvo(), listItens, listKind);
     }
 
     if (line.trim() === '') {
