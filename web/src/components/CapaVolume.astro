@@ -1,4 +1,6 @@
 ---
+import CapaIcone from './CapaIcone.astro';
+
 interface Props {
   totalEdicoes: number;
   totalPaginas: number;
@@ -10,22 +12,30 @@ const { totalEdicoes, totalPaginas } = Astro.props;
   <div class="capa__halftone" aria-hidden="true"></div>
   <div class="capa__motif" aria-hidden="true"></div>
   <div class="capa__slash" aria-hidden="true"></div>
+  <span class="capa__watermark" aria-hidden="true">FT</span>
 
   <div class="capa__top">
-    <span class="capa__selo">MANUAL DO BIXO</span>
-    <span class="capa__issue">VOLUME COMPLETO</span>
+    <div class="capa__masthead">
+      <span class="capa__selo">MANUAL DO BIXO</span>
+      <span class="capa__serie">ULTIMATE · FT 2026</span>
+    </div>
+    <span class="capa__issue">VOLUME</span>
   </div>
 
   <div class="capa__hero">
+    <div class="capa__icone-wrap" aria-hidden="true">
+      <CapaIcone icone="volume" />
+    </div>
     <p class="capa__tagline">TODAS AS EDIÇÕES · SEM CORTAR</p>
-    <h1 class="capa__titulo">Ultimate — Contínuo</h1>
+    <h1 class="capa__titulo">O gibi que o DAC não imprimiu</h1>
     <p class="capa__subtitulo">
-      Folheie o manual inteiro: um capítulo atrás do outro, sem voltar pra lista.
+      Um capítulo atrás do outro. Sem voltar pra lista. Sem pedir no grupo.
     </p>
     <span class="capa__estampa">LER TUDO</span>
   </div>
 
   <footer class="capa__rodape">
+    <span class="capa__preco">R$ 3,00</span>
     <span class="capa__badge">{totalEdicoes} EDIÇÕES · {totalPaginas} QUADROS</span>
     <span class="capa__cta">VIRE →</span>
   </footer>

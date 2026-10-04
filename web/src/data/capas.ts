@@ -1,3 +1,16 @@
+export type CapaIconeId =
+  | 'portao'
+  | 'mapa'
+  | 'bandeja'
+  | 'carimbo'
+  | 'brasao'
+  | 'chave'
+  | 'alerta'
+  | 'festa'
+  | 'megafone'
+  | 'elos'
+  | 'volume';
+
 export type CapaTema = {
   /** Classe CSS `capa--slug` */
   tema: string;
@@ -7,57 +20,65 @@ export type CapaTema = {
   estampa: string;
   /** Motivo decorativo */
   motivo: 'slash' | 'grid' | 'radar' | 'forms' | 'guild' | 'shield' | 'alert' | 'party' | 'megaphone';
+  icone: CapaIconeId;
 };
 
 const capasPorNumero: Record<number, CapaTema> = {
   1: {
     tema: 'boas',
-    tagline: 'ORIGEM · CALOURO · UNICAMP',
-    subtitulo: 'Você passou. Agora respira — e vira a página.',
+    tagline: 'FT · LIMEIRA · CALOURO',
+    subtitulo: 'Você passou. A tempestade fica do outro lado do portão.',
     estampa: 'ENTROU!',
     motivo: 'slash',
+    icone: 'portao',
   },
   2: {
     tema: 'campus',
-    tagline: 'LIMEIRA · FT · CAMPUS 1',
-    subtitulo: 'Não é Campinas. É FT. Aprende o mapa.',
-    estampa: 'MAPA',
+    tagline: 'CIDADE · CAMPUS 1 · NÃO É CAMPINAS',
+    subtitulo: 'Dois endereços. O seu é a FT. GPS mente; o mapa não.',
+    estampa: 'LIMEIRA',
     motivo: 'grid',
+    icone: 'mapa',
   },
   3: {
     tema: 'servicos',
-    tagline: 'RU · CECOM · CIRCULAR · NET',
-    subtitulo: 'Infraestrutura pra continuar vivo entre uma aula e outra.',
+    tagline: 'RU · CECOM · ÔNIBUS · NET',
+    subtitulo: 'Poucos reais, fé e Pix. A FT proverá — o juízo, não.',
     estampa: 'BANDECO',
     motivo: 'radar',
+    icone: 'bandeja',
   },
   4: {
     tema: 'burocracia',
-    tagline: 'DAC · SIGA · MOODLE · CR/CP',
-    subtitulo: 'Formulário com regra. Domina o portal ou ele te atrasa.',
+    tagline: 'DAC · SIGA · MOODLE · CR',
+    subtitulo: 'O portal não tem pressa. A tua rematrícula tem.',
     estampa: 'e-DAC',
     motivo: 'forms',
+    icone: 'carimbo',
   },
   5: {
     tema: 'orgs',
-    tagline: 'CA · ATLÉTICA · EJ · LIGAS',
-    subtitulo: 'Entidades do campus: entra pelo interesse, não pela logo.',
-    estampa: 'ENTRA',
+    tagline: 'CA · ATLÉTICA · EJ · LIGA',
+    subtitulo: 'Uma organização. Entrega. Depois expande.',
+    estampa: 'GUILD',
     motivo: 'guild',
+    icone: 'brasao',
   },
   6: {
     tema: 'permanencia',
-    tagline: 'DEAPE · BOLSAS · SAE · SAPPE',
-    subtitulo: 'Permanecer também é política — e edital vigente.',
+    tagline: 'BOLSA · EDITAL · SAE · SAPPE',
+    subtitulo: 'Permanecer também é dinheiro. Edital manda; PDF velho mente.',
     estampa: 'FICA',
     motivo: 'shield',
+    icone: 'chave',
   },
   7: {
     tema: 'sobrevivencia',
     tagline: 'PROG 1 · PAD · PROVA · IC',
-    subtitulo: 'A FT proverá tomada. O CR, você proverá.',
-    estampa: 'ATENÇÃO',
+    subtitulo: 'A FT proverá a tomada. O CR continua sendo teu.',
+    estampa: 'CR',
     motivo: 'alert',
+    icone: 'alerta',
   },
   8: {
     tema: 'calourada',
@@ -65,29 +86,33 @@ const capasPorNumero: Record<number, CapaTema> = {
     subtitulo: 'Integração sim. Humilhação não. Escolhe o lado certo.',
     estampa: 'TROTE+',
     motivo: 'party',
+    icone: 'festa',
   },
   9: {
     tema: 'movimento',
-    tagline: 'CA · DCE · ASSEMBLEIA · PAUTA',
-    subtitulo: 'Voz formal dos alunos — e o mapa pra não ser pego de surpresa.',
-    estampa: 'INFO',
+    tagline: 'CA · DCE · ASSEMBLEIA',
+    subtitulo: 'Voz formal dos alunos. Não seja pego de surpresa.',
+    estampa: 'PAUTA',
     motivo: 'megaphone',
+    icone: 'megafone',
   },
   10: {
     tema: 'links',
-    tagline: 'DAC · MOODLE · WIFI · ZAP',
-    subtitulo: 'Favorita o que salva a semana. O resto fica no inventário.',
-    estampa: 'LINKS',
+    tagline: 'DAC · WIFI · ZAP · 23h59',
+    subtitulo: 'O link que o grupo nunca manda. Favorita agora.',
+    estampa: 'SALVA',
     motivo: 'radar',
+    icone: 'elos',
   },
 };
 
 const fallback: CapaTema = {
   tema: 'default',
   tagline: 'MANUAL DO BIXO ULTIMATE',
-  subtitulo: 'A HQ satírica que o DAC não imprimiu',
+  subtitulo: 'A HQ satírica que o DAC não imprimiu.',
   estampa: 'HQ',
   motivo: 'slash',
+  icone: 'volume',
 };
 
 export function getCapaTema(numero: number): CapaTema {

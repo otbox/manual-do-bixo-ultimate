@@ -6,8 +6,6 @@
 > de propósito. Se você quer regulamento, a DAC resolve. Aqui é aluno
 > falando com aluno.
 
-![Capa de referência — Manual do Bixo 2026 FT edition](../assets/hq/capa-manual-2026.jpg)
-
 ## Você passou. Agora respira
 
 Este manual não tem vínculo com organização nenhuma. É feito de estudante

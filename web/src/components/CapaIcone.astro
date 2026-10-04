@@ -1,0 +1,117 @@
+---
+import type { CapaIconeId } from '../data/capas';
+
+interface Props {
+  icone: CapaIconeId;
+  class?: string;
+}
+
+const { icone, class: className } = Astro.props;
+const cls = ['capa-icone', className].filter(Boolean).join(' ');
+---
+
+<svg class={cls} viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+  {
+    icone === 'portao' && (
+      <>
+        <path d="M18 98 V38 Q18 14 60 14 Q102 14 102 38 V98" fill="none" stroke="currentColor" stroke-width="7" />
+        <path d="M18 54 H102" fill="none" stroke="currentColor" stroke-width="7" />
+        <path d="M60 14 V98" fill="none" stroke="currentColor" stroke-width="6" />
+        <circle cx="52" cy="70" r="4" fill="currentColor" />
+      </>
+    )
+  }
+  {
+    icone === 'mapa' && (
+      <>
+        <path d="M60 14 C40 14 28 30 28 48 C28 76 60 106 60 106 C60 106 92 76 92 48 C92 30 80 14 60 14 Z" fill="none" stroke="currentColor" stroke-width="7" />
+        <circle cx="60" cy="48" r="12" fill="none" stroke="currentColor" stroke-width="6" />
+      </>
+    )
+  }
+  {
+    icone === 'bandeja' && (
+      <>
+        <path d="M16 62 H104 L96 88 H24 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" />
+        <path d="M28 62 C32 42 48 38 60 50 C72 38 88 42 92 62" fill="none" stroke="currentColor" stroke-width="6" />
+        <circle cx="44" cy="54" r="5" fill="currentColor" />
+        <circle cx="74" cy="52" r="5" fill="currentColor" />
+      </>
+    )
+  }
+  {
+    icone === 'carimbo' && (
+      <>
+        <rect x="28" y="18" width="64" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="7" />
+        <path d="M40 32 H80 M40 46 H68" fill="none" stroke="currentColor" stroke-width="6" />
+        <path d="M48 62 V78 H72 V62" fill="none" stroke="currentColor" stroke-width="7" />
+        <ellipse cx="60" cy="96" rx="28" ry="8" fill="none" stroke="currentColor" stroke-width="6" />
+      </>
+    )
+  }
+  {
+    icone === 'brasao' && (
+      <>
+        <path d="M60 14 L100 30 V62 C100 88 78 104 60 110 C42 104 20 88 20 62 V30 Z" fill="none" stroke="currentColor" stroke-width="7" />
+        <path d="M60 36 L66 50 H82 L70 60 L74 76 L60 66 L46 76 L50 60 L38 50 H54 Z" fill="currentColor" />
+      </>
+    )
+  }
+  {
+    icone === 'chave' && (
+      <>
+        <circle cx="40" cy="42" r="18" fill="none" stroke="currentColor" stroke-width="7" />
+        <circle cx="40" cy="42" r="6" fill="currentColor" />
+        <path d="M54 50 L98 88 L86 100 L78 92 L70 100 L62 92 L74 80" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" />
+      </>
+    )
+  }
+  {
+    icone === 'alerta' && (
+      <>
+        <path d="M60 16 L110 100 H10 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" />
+        <path d="M60 46 V72" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
+        <circle cx="60" cy="86" r="5" fill="currentColor" />
+      </>
+    )
+  }
+  {
+    icone === 'festa' && (
+      <>
+        <path d="M22 86 L60 18 L98 86 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" />
+        <path d="M38 62 H82" fill="none" stroke="currentColor" stroke-width="6" />
+        <circle cx="28" cy="28" r="5" fill="currentColor" />
+        <circle cx="94" cy="36" r="4" fill="currentColor" />
+        <circle cx="84" cy="20" r="3" fill="currentColor" />
+        <path d="M16 100 H104" fill="none" stroke="currentColor" stroke-width="7" />
+      </>
+    )
+  }
+  {
+    icone === 'megafone' && (
+      <>
+        <path d="M22 48 H42 L86 26 V94 L42 72 H22 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round" />
+        <path d="M22 48 V72" fill="none" stroke="currentColor" stroke-width="7" />
+        <path d="M30 72 L38 96 H52 L46 72" fill="none" stroke="currentColor" stroke-width="6" />
+        <path d="M96 40 C108 52 108 68 96 80" fill="none" stroke="currentColor" stroke-width="6" />
+      </>
+    )
+  }
+  {
+    icone === 'elos' && (
+      <>
+        <rect x="18" y="38" width="40" height="28" rx="14" fill="none" stroke="currentColor" stroke-width="7" transform="rotate(-28 38 52)" />
+        <rect x="62" y="38" width="40" height="28" rx="14" fill="none" stroke="currentColor" stroke-width="7" transform="rotate(28 82 52)" />
+      </>
+    )
+  }
+  {
+    icone === 'volume' && (
+      <>
+        <path d="M24 28 H56 V96 H24 C32 88 32 36 24 28 Z" fill="none" stroke="currentColor" stroke-width="7" />
+        <path d="M96 28 H64 V96 H96 C88 88 88 36 96 28 Z" fill="none" stroke="currentColor" stroke-width="7" />
+        <path d="M60 28 V96" fill="none" stroke="currentColor" stroke-width="6" />
+      </>
+    )
+  }
+</svg>

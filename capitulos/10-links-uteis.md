@@ -2,7 +2,7 @@
 
 > A lista de URL, Wi-Fi, Zap e PDF que o bixo procura no grupo às 23h59.
 > Guarda nos favoritos. Link morreu? Confere no site oficial — e, se tiver
-> novidade, manda pro curador (stoco8718@gmail.com).
+> novidade, avisa a galera que mantém o manual.
 
 ## Plataformas e ferramentas
 
@@ -118,6 +118,6 @@ antes de embarcar. A lista abaixo sai de Limeira-SP, salvo onde indicado.
 
 Favorita o que você usa toda semana: DAC, Moodle, WifiPrint, horários do
 circular. O resto fica aqui pra quando o semestre pedir. Achou link morto
-ou tem um novo? Manda: **stoco8718@gmail.com**.
+ou tem um novo? Avisa quem mantém o manual.
 
 > Link salvo no celular vale mais do que “alguém manda no grupo depois”.

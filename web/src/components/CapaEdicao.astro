@@ -1,5 +1,6 @@
 ---
 import { getCapaTema } from '../data/capas';
+import CapaIcone from './CapaIcone.astro';
 
 interface Props {
   titulo: string;
@@ -19,13 +20,20 @@ const capa = getCapaTema(numero);
   <div class="capa__halftone" aria-hidden="true"></div>
   <div class="capa__motif" aria-hidden="true"></div>
   <div class="capa__slash" aria-hidden="true"></div>
+  <span class="capa__watermark" aria-hidden="true">#{edicaoLabel}</span>
 
   <div class="capa__top">
-    <span class="capa__selo">MANUAL DO BIXO</span>
-    <span class="capa__issue">ISSUE #{edicaoLabel}</span>
+    <div class="capa__masthead">
+      <span class="capa__selo">MANUAL DO BIXO</span>
+      <span class="capa__serie">ULTIMATE · FT 2026</span>
+    </div>
+    <span class="capa__issue">Nº {edicaoLabel}</span>
   </div>
 
   <div class="capa__hero">
+    <div class="capa__icone-wrap" aria-hidden="true">
+      <CapaIcone icone={capa.icone} />
+    </div>
     <p class="capa__tagline">{capa.tagline}</p>
     <h1 class="capa__titulo">{titulo}</h1>
     <p class="capa__subtitulo">{capa.subtitulo}</p>
@@ -33,6 +41,7 @@ const capa = getCapaTema(numero);
   </div>
 
   <footer class="capa__rodape">
+    <span class="capa__preco">R$ 3,00</span>
     <span class="capa__badge">{totalPaginas} QUADROS</span>
     <span class="capa__cta">VIRE →</span>
   </footer>

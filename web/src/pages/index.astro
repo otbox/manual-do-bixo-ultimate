@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CapaIcone from '../components/CapaIcone.astro';
 import { loadAllEdicoes } from '../utils/load-capitulos';
 import { getCapaTema } from '../data/capas';
 import { totalPaginasConteudo } from '../utils/volume-continuo';
@@ -40,7 +41,10 @@ const base = import.meta.env.BASE_URL;
               class:list={['edicao-card', `edicao-card--${capa.tema}`]}
               href={`${base}edicao/${edicao.slug}/`}
             >
-              <span class="edicao-card__num">ISSUE #{String(edicao.numero).padStart(2, '0')}</span>
+              <div class="edicao-card__topo">
+                <CapaIcone icone={capa.icone} class="edicao-card__icone" />
+                <span class="edicao-card__num">Nº {String(edicao.numero).padStart(2, '0')}</span>
+              </div>
               <span class="edicao-card__estampa">{capa.estampa}</span>
               <h2 class="edicao-card__titulo">{edicao.titulo}</h2>
               <p class="edicao-card__tagline">{capa.tagline}</p>

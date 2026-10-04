@@ -1,6 +1,7 @@
 ---
 import type { Edicao } from '../types/hq';
 import { getCapaTema } from '../data/capas';
+import CapaIcone from './CapaIcone.astro';
 
 interface Props {
   edicao: Edicao;
@@ -16,8 +17,9 @@ const label = String(edicao.numero).padStart(2, '0');
   data-edicao-slug={edicao.slug}
 >
   <div class="divisor-edicao__inner">
+    <CapaIcone icone={capa.icone} class="divisor-edicao__icone" />
     <p class="divisor-edicao__kicker">PRÓXIMA EDIÇÃO</p>
-    <p class="divisor-edicao__num">ISSUE #{label}</p>
+    <p class="divisor-edicao__num">Nº {label}</p>
     <h2 class="divisor-edicao__titulo">{edicao.titulo}</h2>
     <p class="divisor-edicao__meta">{edicao.paginas.length} páginas · continue virando</p>
     <span class="divisor-edicao__estampa">{capa.estampa}</span>
