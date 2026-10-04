@@ -1,0 +1,21 @@
+**/node_modules
+.git
+.github
+.env
+.env.*
+!.env.example
+.deploy.env
+.deploy.previous.env
+npm-debug.log
+coverage
+dist
+web/dist
+
+# Fora do build da HQ (conteúdo já está em web/)
+fontes
+docs
+capitulos
+assets
+memory
+deploy
+**/.DS_Store

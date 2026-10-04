@@ -28,6 +28,7 @@ A versão web terá formato de **revista em quadrinhos folheável** (page-flip, 
 | [docs/04-padrao-markdown-web.md](docs/04-padrao-markdown-web.md) | Convenções de markdown para a versão web |
 | [docs/05-fluxo-de-trabalho.md](docs/05-fluxo-de-trabalho.md) | Fluxo de produção dos capítulos |
 | [docs/06-versao-web.md](docs/06-versao-web.md) | Conceito da versão web (HQ folheável) + prompt de geração |
+| [docs/07-guia-implantacao-servicos.md](docs/07-guia-implantacao-servicos.md) | Guia leigo: tipos de serviço, deploy, exemplo deste projeto |
 
 ## Fontes de referência
 

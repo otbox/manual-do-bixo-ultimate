@@ -1,48 +1,56 @@
 # Calourada e Cultura
 
-> Calourada é integração, não humilhação. A Unicamp tem tradição de trote
-> solidário — sangue, alimento, cidadania. Abuso tem canal de denúncia e zero
-> glamour.
+> Calourada é integração. A Unicamp tem tradição de trote solidário —
+> sangue, alimento, cidadania. Abuso tem canal de denúncia e zero glamour.
+> O resto é festa, gincana e gente se conhecendo em poucos dias.
 
 ## Semana de recepção
 
-Coordenação, tour de lab, gincana leve, apresentação de curso e entidades.
-Aparece. É o mapa social comprimido em poucos dias. Pedágio e festa existem na
-tradição de Limeira; grana de pedágio historicamente volta pra estudante — pergunta
-pra org do ano o destino do caixa.
+Coordenação, tour de laboratório, gincana, apresentação de curso e de
+entidades. Aparece. É o mapa social comprimido numa semana. Pedágio e
+festa existem na tradição de Limeira; a grana de pedágio, historicamente,
+volta pra estudante. Pergunta pra organização do ano pra onde o caixa vai,
+em vez de assumir.
 
 ### Gincana, JOSÉ e Taça Bixo
 
-Gincana testa resistência física (e imunológica). Se você é mais de sofá
-que de corrida, existe o espírito do JOSÉ (jogos sedentários) na tradição
-antiga — o ponto é participar sem se machucar de bobeira. Rep lidera time;
-você escolhe o nível de caos.
+A gincana testa resistência física e, sejamos honestos, imunológica.
+República costuma liderar time, e os bixos se enfrentam atrás da Taça
+Bixo. Se você é mais de sofá do que de corrida, a tradição antiga guarda
+o JOSÉ — jogos sedentários. O ponto é participar sem se machucar de
+bobeira. Você escolhe o nível de caos.
 
-- Prefere solidário: hemonúcleo e arrecadação de alimento.
-- Prefere festa: combina ponto de encontro e volta segura.
-- Prefere sumir: ok, mas aparece no tour de lab — isso não é opcional pra nota social.
+O trote solidário — hemonúcleo, arrecadação de alimento, visita a entidade
+— é o lado da semana que envelhece bem. Festa também faz parte. Combina
+ponto de encontro e volta segura antes da música começar.
 
-## Tolerância zero com abuso
+- Prefere o solidário: hemonúcleo e arrecadação de alimento.
+- Prefere a festa: combina ponto de encontro e a volta.
+- Prefere sumir da bagunça: tudo bem, mas aparece no tour de laboratório. Aquilo é mapa, não figurinha.
+
+## O que não entra na brincadeira
 
 Trote vexatório, agressivo ou constrangedor é proibido por resolução da
 reitoria. Ouvidoria e diretoria da faculdade existem. Sigilo e acolhimento
-não são “frescura”: são regra.
+são regra, não frescura. Se alguma coisa passar do limite, você tem pra
+quem falar — e não precisa “aguentar pra integrar”.
 
-> Integração boa te apresenta gente. Integração ruim te apresenta boletim de
-> ocorrência. Escolhe o lado certo da história.
+> Integração boa te apresenta gente. O que constrange tem nome, canal e
+> consequência. Fica do lado que você consegue contar depois sem vergonha.
 
 ## Cultura no campus e na cidade
 
-Semana do curso, atlética, teatro municipal, hípica, grupo de WhatsApp de
-carona. FT é quieta; cultura pedida no delivery de Barão/FCA ou na cidade.
-Monta tua própria agenda ou a agenda te engole com Netflix e culpa.
+Semana do curso, atlética, teatro municipal, hípica, grupo de carona. A
+FT é quieta no dia a dia; o agito extra costuma vir da FCA, de Barão ou da
+própria cidade. Monta uma agenda pequena — um evento por quinzena já muda
+o semestre — ou a rotina te engole entre Moodle e a culpa de não ter saído.
 
 ## Fechamento
 
-Calourada passa. Amizade e macete de corredor ficam. Entra com curiosidade,
-sai com mapa — e sem precisar de narrativa traumática pra “provar” que
-estudou na federal.
+A calourada passa. Amizade e macete de corredor ficam. Entra com
+curiosidade e sai com um mapa de gente. Federal não exige narrativa
+traumática como prova de que você estudou nela.
 
 ### Macete
 
-- Na primeira festa, combina com alguém o “ponto de resgate” (horário + local) antes da música começar — prevenção > heroísmo.
+- Na primeira festa, combina com alguém o ponto de resgate — horário e local — antes da música começar.

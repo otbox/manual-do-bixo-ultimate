@@ -1,0 +1,15 @@
+services:
+  manual-do-bixo-ultimate:
+    image: ${APP_IMAGE:?Defina APP_IMAGE em .deploy.env}
+    container_name: manual-do-bixo-ultimate
+    restart: unless-stopped
+    init: true
+    expose:
+      - "80"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    name: proxy

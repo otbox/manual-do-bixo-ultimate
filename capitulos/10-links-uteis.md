@@ -1,23 +1,23 @@
 # Links Úteis
 
-> A lista de URLs, Wi-Fi, Zap e PDFs que o bixo procura no grupo às 23h59.
-> Guarda favorito. Link muda? Confirma no site oficial — e se tiver novidade,
-> manda pro curador (stoco8718@gmail.com).
+> A lista de URL, Wi-Fi, Zap e PDF que o bixo procura no grupo às 23h59.
+> Guarda nos favoritos. Link morreu? Confere no site oficial — e, se tiver
+> novidade, manda pro curador (stoco8718@gmail.com).
 
 ## Plataformas e ferramentas
 
-Aqui mora o kit mínimo pra sobreviver a matrícula, aula e certificado. Abre
-cada um uma vez na primeira semana — só pra descobrir que a senha do e-DAC
-não é a mesma da FT (e ninguém avisa isso com carinho).
+Aqui mora o kit mínimo pra matrícula, aula e certificado. Abre cada um
+uma vez na primeira semana. A senha do e-DAC não é a mesma da FT, e
+quase ninguém avisa isso com calma.
 
 - [DAC — portal do estudante](https://www.dac.unicamp.br/portal/acesso/estudantes): e-DAC pra mexer em matrícula e vida acadêmica.
 - [GGTE](https://ggte.unicamp.br/): mapa das ferramentas (Moodle, Classroom, cursos).
 - [Moodle](https://moodle.ggte.unicamp.br/) (tem app): materiais, prazo e avaliação. Alguns professores usam Google Classroom no mesmo e-mail DAC.
 - [Coursera](https://www.coursera.org/): acesso gratuito com e-mail institucional Unicamp.
-- [GDE](https://grade.daconline.unicamp.br/login/): planejamento e avaliação de professores/disciplinas — não ignore o lembrete de avaliar.
+- [GDE](https://grade.daconline.unicamp.br/login/): planejamento e avaliação de professores e disciplinas. O lembrete de avaliar existe por um motivo.
 - [Linktree da CDI](https://linktr.ee/cdiunicamp): links de sistemas e suporte da FT.
 - [Portal da CDI](https://site-cdi.vercel.app/): hub com estágio, IC, intercâmbio e mais.
-- [Pacote Office 365](https://office365.unicamp.br/idp/Authn/UserPassword): Word/Excel/PowerPoint + ~30 GB na nuvem.
+- [Pacote Office 365](https://office365.unicamp.br/idp/Authn/UserPassword): Word, Excel, PowerPoint e cerca de 30 GB na nuvem.
 - [Horas complementares e extensão (TADS/BSI)](https://www3.ft.unicamp.br/sites/default/files/graduacao/RegulamentoSI918_1.pdf): limites e regras no PDF.
 - [Glossário DAC](https://www.dac.unicamp.br/portal/vida-academica/graduacao/matricula/matricula-em-disciplinas/glossario-da-dac): currículo pleno, eletiva e o resto do dicionário.
 - [DAC explica disciplinas / blocos de eletivas](https://www.dac.unicamp.br/portal/noticias/2024/11/29/dac-explica-disciplinas-graduacao).
@@ -26,32 +26,32 @@ não é a mesma da FT (e ninguém avisa isso com carinho).
 ### Macete
 
 - Horário do semestre: **e-DAC → matrícula → relatório final**.
-- CR/CP: **SIGA → Integralização e simulação** (pelo portal da DAC) e gera o relatório.
+- CR e CP: **SIGA → Integralização e simulação** (pelo portal da DAC) e gera o relatório.
 - Já cursou matéria fora? Equivalência no SIGA cedo, não na rematrícula em pânico.
-- Org séria costuma render ~30 h complementares por semestre — pergunta antes de entrar só pela vibe.
+- Organização séria costuma render cerca de 30 horas complementares por semestre. Pergunta antes de entrar só pela vibe.
 
-## Impressão, lab e Wi-Fi
+## Impressão, laboratório e Wi-Fi
 
-Imprimir na FT, logar no lab e não ficar offline na aula 1: três coisas
-separadas, três senhas diferentes.
+Imprimir na FT, logar no laboratório e não ficar offline na aula 1 são
+três coisas separadas, com três senhas diferentes. Anota numa vez só.
 
 - [Impressão na FT (WifiPrint)](https://ibquota.ft.unicamp.br/wifiprint/index.php): precisa estar no Wi-Fi da FT.
 - [Informática da FT (calourada)](https://wordpress.ft.unicamp.br/calourada/informatica/): infraestrutura e sistemas.
-- [Login / senha dos labs](https://sistemas.ft.unicamp.br/intranet/login.php): cria senha FT pra usar os computadores.
+- [Login / senha dos labs](https://sistemas.ft.unicamp.br/intranet/login.php): cria a senha FT pra usar os computadores.
 - [Eduroam — detalhes](https://www.dac.unicamp.br/portal/noticias/2023/11/17/acesso-rede-wi-fi-eduroam).
 
 ### Macete
 
 - **Wi-Fi da FT**: usuário e senha **da FT** (não da DAC).
 - **Eduroam**: usuário `SEU_RA@unicamp.br` + senha da **DAC**.
-- Rede **"ft"** (quando pedir config avançada): protocolo **TTLS**, certificados **não usar**, autenticação **MSCHAPv2**, login FT.
-- E-mail institucional: olha todo dia. Aviso importante raramente chega no grupo de Zap primeiro.
+- Rede **"ft"** (quando pedir configuração avançada): protocolo **TTLS**, certificados **não usar**, autenticação **MSCHAPv2**, login FT.
+- E-mail institucional: olha todo dia. Aviso importante raramente chega primeiro no grupo de Zap.
 
-> A FT proverá net. Duas senhas, você proverá.
+> A FT provê a rede. As duas senhas continuam com você.
 
-## Grupos de WhatsApp (campus)
+## Grupos de WhatsApp do campus
 
-Zap não é sistema oficial — link expira, admin muda, informação circula.
+Zap não é sistema oficial. Link expira, admin muda, informação circula.
 Entra nos que te servem e silencia o resto.
 
 - [Bot do Bandeco](https://chat.whatsapp.com/FL4oCDOIOmTJI405NNvUS9)
@@ -62,12 +62,12 @@ Entra nos que te servem e silencia o resto.
 - [Esportes FT](https://chat.whatsapp.com/E4uwpyiqhFRKF1qCiHiRHn)
 - [Estágio (CDI)](https://chat.whatsapp.com/IeXDZAw7b2o303ed8oY0xw)
 
-Portal CDI também aponta [iniciação científica](https://prp.unicamp.br/iniciacao-cientifica/pibic-pibiti/programas/) e [intercâmbio](http://www.internationaloffice.unicamp.br/).
+O portal da CDI também aponta [iniciação científica](https://prp.unicamp.br/iniciacao-cientifica/pibic-pibiti/programas/) e [intercâmbio](http://www.internationaloffice.unicamp.br/).
 
 ## Transporte e circular
 
-PDF da Prefeitura de Limeira + grupo de circular. “Tempo real” do SAR, no
-momento desta edição: **não funciona** — não conte com ele pra pegar o ponto.
+PDF da Prefeitura de Limeira e o grupo do circular. O “tempo real” do
+SAR, nesta edição, **não funciona** — não conta com ele pra pegar o ponto.
 
 - [Horários do circular (PDF)](https://prefeituralimeira.unicamp.br/wp-content/uploads/sites/35/2025/01/Horarios.pdf)
 - [Itinerário diurno](https://prefeituralimeira.unicamp.br/wp-content/uploads/sites/35/2025/01/Pontos_dia.pdf)
@@ -77,10 +77,10 @@ momento desta edição: **não funciona** — não conte com ele pra pegar o pon
 - [Transporte / Intercamp (prefeitura Limeira)](https://prefeituralimeira.unicamp.br/transporte/)
 - [Grupo do circular interno](https://chat.whatsapp.com/Glb6vxcBfiCCbUnHr432bp)
 
-## Caronas (Limeira ↔ cidades)
+## Caronas (Limeira e outras cidades)
 
 Grupos de carona **não são oficiais**. Confirma destino, horário e perfil
-antes de embarcar. Lista abaixo: origem Limeira-SP, salvo onde indicado.
+antes de embarcar. A lista abaixo sai de Limeira-SP, salvo onde indicado.
 
 ### Limeira → região
 
@@ -116,8 +116,8 @@ antes de embarcar. Lista abaixo: origem Limeira-SP, salvo onde indicado.
 
 ## Fechamento
 
-Favorita o que você usa toda semana (DAC, Moodle, WifiPrint, horários do
-circular). O resto fica aqui pra quando o semestre pedir. Achou link morto ou
-tem um novo? Manda: **stoco8718@gmail.com**.
+Favorita o que você usa toda semana: DAC, Moodle, WifiPrint, horários do
+circular. O resto fica aqui pra quando o semestre pedir. Achou link morto
+ou tem um novo? Manda: **stoco8718@gmail.com**.
 
-> Link salvo no celular vale mais que “alguém manda no grupo depois”.
+> Link salvo no celular vale mais do que “alguém manda no grupo depois”.

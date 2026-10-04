@@ -1,128 +1,153 @@
 # A FT e a Unicamp
 
-> Não olhou o campus no edital, achou que universidade de Campinas
-> logicamente só existiria em Campinas, e ficou impressionado na matrícula
-> quando viu “Limeira”? Respira. Abaixo: a cidade, a universidade e o campus
-> — nessa ordem, pra você parar de se perder.
+> Não olhou o campus no edital, achou que universidade de Campinas só
+> existiria em Campinas, e levou um susto na matrícula quando apareceu
+> “Limeira”? Respira. Abaixo vai a cidade, a universidade e o campus —
+> nessa ordem, pra você parar de se perder.
 
-## Limeira: clima, água e cultura
+## Limeira: calor, cana e chuva
 
-Apresento Limeira, onde você vai passar por longos períodos de calor — seco e
-úmido, as duas “estações” oficiais da região. A temperatura mínima gira em
-torno dos 18 °C, então casaco pesado é mais status do que necessidade na maior
-parte do ano. É zona de cultivo de cana: queimada e ar seco aparecem com
-frequência; umidificador deixa de ser frescura e vira necessidade.
-Outro detalhe pouco glamouroso: a drenagem da cidade não é das melhores. Em
-chuva forte, pedaços do Centro e outras regiões alagam — vale olhar o mapa de
-alagamentos de Limeira antes de escolher rota de bike ou imóvel “barato
-demais perto do córrego”.
+Limeira é onde você vai passar longos períodos de calor, seco e úmido —
+as duas estações que a região realmente entrega. A mínima gira em torno
+dos 18 °C, então casaco pesado, na maior parte do ano, é mais precaução
+do que necessidade. É zona de cultivo de cana: queimada e ar seco
+aparecem com frequência. Umidificador deixa de ser frescura e vira item
+de casa.
+
+A drenagem da cidade também pede atenção. Em chuva forte, pedaços do
+Centro e outras regiões alagam. Antes de fechar imóvel “barato demais
+perto do córrego”, ou de traçar rota de bike, olha o mapa de alagamentos
+de Limeira. A gente aprende isso uma vez; a segunda já é teimosia.
 
 ![Mapa esquemático de Limeira — FT, ferrovia e pontos de atenção](../assets/hq/mapa-limeira.jpg)
 
-### Eventos e vida fora da sala
+*Link: [Mapa de alagamentos em Limeira](https://www.limeira.sp.gov.br/sitenovo/downloads/7576e16cc2c47e6daf00d4ceeb47aece.pdf)*
 
-Tem agenda universitária (amigo, grupo, rep, org) e agenda da cidade: teatro
-municipal, parque da cidade (hípica), eventos da prefeitura. A hípica costuma
-ter programação com certa frequência — útil quando a FT estiver em modo
-“sossego extremo” e você precisar lembrar que existe vida além do LP. Siga o
-Instagram da cidade e a agenda oficial; o boca a boca resolve o resto.
+### Vida fora da sala
 
-- Confira o mapa de alagamentos antes da temporada de chuva.
-- Siga ARULI / grupos de moradia e a agenda cultural da cidade.
-- Na primeira semana, mapeie padaria, farmácia e mercado na Cônego Manuel Alves.
+Tem a agenda da universidade, que você descobre por amigo, grupo, rep e
+organização, e tem a agenda da cidade: teatro municipal, parque (a
+hípica), eventos da prefeitura. A hípica costuma ter programação com
+certa frequência — útil quando a FT entra em modo sossego e você precisa
+lembrar que existe vida além do laboratório. Instagram da cidade e a
+agenda oficial resolvem o grosso; o boca a boca resolve o resto.
 
-## Onde morar (sem romance)
+- Confere o [mapa de alagamentos em Limeira](https://www.limeira.sp.gov.br/sitenovo/downloads/7576e16cc2c47e6daf00d4ceeb47aece.pdf) antes da temporada de chuva.
+- Segue a ARULI, os grupos de moradia e a agenda cultural da cidade.
+- Na primeira semana, mapeia padaria, farmácia e mercado na Cônego Manuel Alves.
 
-Em Limeira dá pra montar vida de várias formas, e nenhuma é “a certa” pra
-todo mundo. **Repúblicas** (femininas, masculinas, mistas) servem quem quer
-conhecer gente e viver em comunidade — cada uma com cultura própria; o
-Instagram da ARULI ajuda a vasculhar. **Kitnets** dão privacidade, em geral
-com aluguel mais salgado. **Casas ou apartamentos compartilhados** são o
-clássico “turma se junta, alguém tranca, abre vaga no grupo de moradia” —
-quarto individual ou compartilhado, conforme o anúncio. **Pensões /
-pensionatos**: muita gente aluga edícula ou quarto em casa; às vezes o dono
-mora na frente, às vezes só estudante. Você aluga o quarto, divide área
-comum, costuma ter bom custo-benefício… e não escolhe os colegas.
+## Onde morar
 
-Ao longo do curso, muita gente **se afasta das reps** e busca lugar mais
-quieto ou isolado — estágio, sono, ou só paz. Marketing de “rep = onde você
-cresce” funciona pra alguns e é propaganda pra outros. Escolhe pelo que você
-aguenta no semestre, não pelo reel.
+Em Limeira dá pra montar a vida de vários jeitos, e nenhum serve pra todo
+mundo. O que importa é o que você aguenta no semestre, não o que ficou
+bonito no reel.
 
-### Lado FT × lado FCA × Centro
+**Repúblicas** (femininas, masculinas, mistas) funcionam pra quem quer
+conhecer gente e viver em comunidade. Cada uma tem cultura própria; o
+Instagram da ARULI ajuda a vasculhar antes de aparecer na porta.
 
-Lado FT (Vila Cristovam, Nova Itália, Vila Anita, Morro Azul): pé na portaria.
-Lado FCA (Cidade Universitária, Chácara Antonieta): kitnet moderna + circular.
-Centro: comércio e terminal; uns 15 min a pé subindo a Cônego.
+**Kitnets** dão privacidade. O aluguel, em geral, vem mais salgado.
+
+**Casas ou apartamentos compartilhados** são o clássico: uma turma se
+junta, alguém se muda, abre vaga no grupo de moradia. Quarto individual
+ou compartilhado, conforme o anúncio.
+
+**Pensões e pensionatos**: muita gente aluga edícula ou quarto em casa.
+Às vezes o dono mora na frente, às vezes só estudante. Você aluga o
+quarto, divide a área comum, o custo-benefício costuma ser bom — e você
+não escolhe os colegas.
+
+Com o tempo, muita gente se afasta das reps e busca um lugar mais quieto.
+Estágio, sono, ou só paz. “Rep é onde você cresce” é verdade pra alguns e
+propaganda pra outros.
+
+### Lado FT, lado FCA, Centro
+
+Lado FT (Vila Cristovam, Nova Itália, Vila Anita, Morro Azul): pé na
+portaria. Lado FCA (Cidade Universitária, Chácara Antonieta): kitnet mais
+nova e o circular. Centro: comércio e terminal; uns 15 minutos a pé
+subindo a Cônego.
 
 ### Macete
 
-- Visite o imóvel de dia e de noite antes de assinar. Foto de anúncio mente.
-- Pergunte o que está incluso (condomínio, IPTU, internet) e qual garantia exigem.
-- Se for concorrer a auxílio-moradia, lê o edital DEAPE antes de fechar contrato.
-- Planeje a moradia em fases: o que serve no 1º ano pode não servir no estágio.
+- Visita o imóvel de dia e de noite antes de assinar. Foto de anúncio mente.
+- Pergunta o que está incluso (condomínio, IPTU, internet) e qual garantia exigem.
+- Se for concorrer a auxílio-moradia, lê o edital da DEAPE antes de fechar contrato.
+- Pensa a moradia em fases: o que serve no primeiro ano pode apertar no estágio.
 
-## A universidade (pilares sem verniz)
+## A universidade, sem verniz de folder
 
-A Unicamp é uma das maiores da América Latina e oferece um sistema completo:
-bolsas, auxílios, eventos, extensão e pesquisa. Os pilares oficiais —
-**extensão, docência e pesquisa** — não são slogan de folder: pra fechar a
-graduação você precisa atravessar os três de algum jeito.
+A Unicamp é uma das maiores da América Latina e tem um sistema inteiro à
+disposição: bolsa, auxílio, evento, extensão, pesquisa. Os pilares
+oficiais — **extensão, docência e pesquisa** — não são frase de
+apresentação. Pra fechar a graduação, você atravessa os três de algum
+jeito.
 
-**Extensão** é a pedra no sapato clássica de quem é mais introvertido: cerca
-de 10% da carga horária do curso em horas de extensão. Dá pra cumprir
-ajudando ONG, entrando em projeto (com ou sem bolsa), ou pagando cursos tipo
-Extecamp / Instituto Confúcio — útil, mas confirma carga e limite no teu
-catálogo. Algumas matérias já dão hora de extensão; quase nunca o bastante
-sozinhas. **Docência**, pro estudante comum, é fazer as matérias; pra quem
-mira carreira acadêmica, um dia também é lecionar.
-Quando a aula flertar com o caos, lembra: o professor é antes de tudo
-pesquisador que também dá aula — e aí monitoria e PAD existem. **Pesquisa**:
-CR e histórico importam; IC (PIBIC, PIBIT, voluntário, FAPESP) abre porta pra
-mestrado. FAPESP paga mais e exige mais escopo (e mais página). Caminho
-clássico de IC: professor com sinergia → conversa pré/pós aula → e-mail
-demonstrando interesse → reunião. Sem medo de mandar o e-mail.
+**Extensão** é a pedra no sapato clássica de quem é mais introvertido:
+cerca de 10% da carga horária do curso em horas de extensão. Dá pra
+cumprir ajudando ONG, entrando em projeto (com ou sem bolsa) ou pagando
+curso tipo Extecamp / Instituto Confúcio. Algumas matérias já dão hora de
+extensão; quase nunca o bastante sozinhas. Confirma carga e limite no teu
+catálogo antes de contar com o que “alguém disse que conta”.
 
-Horas **complementares** são outro pacote (em geral até menos de 20% da carga),
-adquiridas por caminhos parecidos e **limitadas por categoria**. Não misture
-extensão com complementar na cabeça — e consulta cedo quanto falta de cada
-uma. Deixar tudo pra cima do estágio é pedir pra apertar o semestre sem
-necessidade.
+**Docência**, pro estudante comum, é fazer as matérias. Pra quem mira
+carreira acadêmica, um dia também é lecionar. Quando a aula flertar com o
+caos, lembra de uma coisa simples: o professor é, antes de tudo,
+pesquisador que também dá aula. Monitoria e PAD existem justamente pra
+quando a didática não alcançar.
 
-> Professor é pesquisador que por acaso leciona. Quando a didática falhar,
-> lembra do cargo principal — e vai atrás de monitoria.
+**Pesquisa**: CR e histórico importam. IC (PIBIC, PIBIT, voluntário,
+FAPESP) abre porta pra mestrado. A FAPESP paga mais e pede mais escopo —
+e mais página. O caminho clássico é prosaico: acha um professor com quem
+você tenha interesse de verdade, conversa antes ou depois da aula, manda
+um e-mail curto demonstrando isso, marca uma reunião. Manda o e-mail. O
+pior que acontece é silêncio.
+
+Horas **complementares** são outro pacote, em geral até menos de 20% da
+carga, e vêm limitadas por categoria. Extensão e complementar não são a
+mesma conta. Olha cedo quanto falta de cada uma. Deixar tudo pra cima do
+estágio é pedir pra apertar o semestre à toa.
+
+> Professor é pesquisador que também leciona. Quando a aula não fechar,
+> vai atrás de monitoria — e manda o e-mail da IC sem ensaio de três dias.
 
 ## O campus da FT
 
-O campus da FT é ideal pra quem quer um pouco de sossego da vida universitária
-“de novela”. O movimento é menor, o engajamento no dia a dia também — muita
-gente fica refém de matérias cansativas o bastante pra não sobrar disposição
-pra nada além da matéria. Se quiser mais agito, o caminho costuma passar por
-FCA ou Barão. O campus divide espaço com o Cotil: você vai ver adolescente em
-turma agitada, e a galera da FT culpa eles por tudo que quebra (com ou sem
-prova). Observação prática: as **quadras** são deles; uso da galera da FT em
-geral é de noite / combinado com atlética — pergunta antes de invadir treino.
+O campus da FT combina com quem quer um pouco de sossego da vida
+universitária de novela. O movimento é menor, o engajamento do dia a dia
+também. Muita gente fica refém de matérias cansativas o bastante pra não
+sobrar disposição pra “missão secundária”, se me entende. Se quiser mais
+agito, o caminho costuma passar pela FCA ou por Barão.
 
-Na FT rolam eventos de curso (Tecnologia em Foco, Semana da Engenharia e
-afins) em que boa parte dos professores libera aula pra você participar.
-Aproveita: é cultura, hora e desculpa oficial pra não ficar só no Moodle.
+O campus divide espaço com o Cotil. Você vai cruzar com turma de
+adolescente no corredor, e a galera da FT tem o hábito de culpar eles por
+tudo que quebra — às vezes com razão, às vezes por costume. As **quadras**
+são deles; o uso da FT, em geral, é de noite e combinado com a atlética.
+Pergunta antes de invadir treino.
+
+Na FT rolam eventos de curso — Tecnologia em Foco, Semana da Engenharia e
+afins — em que boa parte dos professores libera a aula pra você
+participar. Aproveita. É cultura, hora e um motivo oficial pra sair do
+Moodle.
 
 ![Um pedaço do Campus 1 da FT — prédios, portal e verde](../assets/hq/campus-ft-fotos.jpg)
 
 ### Salas: PA, SA, LP
 
-PA = anfiteatro. SA = sala teórica. LP = lab de programação (TIC). A FT tem
-sistema de alocação de salas na intranet: busca código/horário e acha onde
-cair de paraquedas no primeiro dia.
+PA é anfiteatro. SA é sala teórica. LP é laboratório de programação (TIC).
+A FT tem sistema de alocação de salas na intranet: busca o código e o
+horário e descobre onde cair no primeiro dia, em vez de vagar pelo
+corredor fingindo confiança.
 
-- No dia 1, vá só ao Campus 1 (FT). FCA não é “quase a mesma coisa”.
-- Consulte alocação de salas antes de vagar pelo corredor fingindo confiança.
-- Eduroam + e-mail DAC: configura no celular antes da aula que “só precisa de net”.
+- No dia 1, vai só ao Campus 1 (FT). A FCA é outro endereço.
+- Consulta a alocação de salas antes da primeira aula.
+- Configura Eduroam e o e-mail DAC no celular antes da aula que “só precisa de net”.
 
 ## Fechamento
 
-Limeira não é castigo: é mapa (com alagamento e umidificador). FT não é Barão
-em miniatura: é outro ritmo. Aprende endereço, clima e pilares — o resto do
-manual encaixa em cima disso.
+Limeira pede umidificador e um olho no mapa de chuva. A FT tem outro
+ritmo, mais quieto, e isso também é um jeito de fazer universidade.
+Endereço, clima e os três pilares resolvem a maior parte do susto inicial.
+O resto do manual encaixa em cima disso.
 
-> A FT proverá energia, Wi-Fi e bandeco. Moradia e juízo, não.
+> A FT provê energia, Wi-Fi e bandeco. Moradia e juízo continuam com você.

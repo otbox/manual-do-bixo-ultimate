@@ -1,52 +1,54 @@
 # Organizações Estudantis
 
-> Organizações estudantis são grupos de gente engajada em algum tema —
-> atlética, CA, empresa júnior, liga, comissão, extensão. O assunto varia; o
-> ponto em comum é: participação de verdade gera rede, hora e (quase sempre)
-> história pra contar no processo seletivo.
+> Organizações estudantis funcionam um pouco como guildas: gente engajada
+> num assunto, que pode ser atlética, centro acadêmico, empresa júnior,
+> liga, comissão, extensão. O tema muda. O que se repete é que participação
+> de verdade gera rede, hora e, quase sempre, uma história pra contar
+> depois.
 
-## O mapa das entidades
+## O mapa
 
-Na FT o ritmo é mais quieto que Barão: muita gente busca engajamento extra na
-FCA ou em Campinas. Mesmo assim, no começo do semestre rola feira de entidades
-— aparece. Tem centro acadêmico, atlética, empresas juniores, comissões, ligas
-(dados, finanças, tech…) e projetos de extensão. Pra conhecer o catálogo do
-ano, olha materiais da CDI, guias atualizados e os links úteis que a galera
-repassa (o “organizações 2021” do manual antigo já envelheceu; busca a lista
-viva do semestre).
+Na FT o ritmo é mais quieto que em Barão. Muita gente busca o engajamento
+extra na FCA ou em Campinas, e tudo bem. Mesmo assim, no começo do
+semestre rola feira de entidades. Aparece. Tem centro acadêmico, atlética,
+empresas juniores, comissões, ligas (dados, finanças, tecnologia) e
+projetos de extensão. Pra conhecer o catálogo do ano, olha o material da
+CDI, os guias que a galera atualiza e os links úteis do semestre. A lista
+“organizações 2021” dos manuais antigos já envelheceu; o que vale é a
+lista viva.
 
-O importante: além de contribuir pra causa, participação séria costuma gerar
-**horas complementares** — na prática da FT, muita org oferece algo na casa de
-**~30 horas por semestre** (confirma na própria organização antes de jurar).
-Em alguns casos também entra hora de **extensão**. Pesquisa o benefício antes
-de entrar só pela logo no Instagram.
+Além de contribuir pra causa, participação séria costuma gerar **horas
+complementares**. Na prática da FT, muita organização oferece algo na casa
+de **30 horas por semestre** — confirma na própria entidade antes de
+contar com o número. Em alguns casos também entra hora de **extensão**.
+Pesquisa o benefício antes de entrar só pela logo no Instagram.
 
-### O que costuma rolar
+### O que perguntar na feira
 
-Processo seletivo semestral é padrão em EJ, ligas e projetos. Uma org boa em
-que você entrega > cinco orgs fantasma no LinkedIn. Vai na feira com pergunta
-pronta: carga semanal, hora complementar, extensão, clima interno.
+Processo seletivo semestral é padrão em empresa júnior, liga e projeto.
+Uma organização em que você entrega vale mais do que cinco fantasmas no
+LinkedIn. Vai na feira com pergunta pronta: carga semanal, hora
+complementar, extensão, clima interno.
 
-- “Quantas horas por semana de verdade?”
-- “Isso conta complementar, extensão, ou só experiência?”
-- Lê edital/estatuto antes de jurar amor eterno à marca.
+- “Quantas horas por semana, de verdade?”
+- “Isso conta como complementar, extensão, ou só experiência?”
+- Lê o edital ou o estatuto antes de jurar amor eterno à marca.
 
-## União FT (sem panelinha)
+## União entre cursos
 
-Tradição saudável do campus: união entre cursos. Atlética, CA e EJ existem
-pra comunidade. Veterano de verdade não esconde vaga atrás de grade.
+A tradição saudável deste campus é união entre os cursos. Atlética, centro
+acadêmico e empresa júnior existem pra comunidade. Veterano de verdade não
+esconde vaga atrás de grade nem transforma entidade em clube fechado.
 
-> Se a org só serve pra clube fechado, você entrou no lugar errado. Sai fora e
-> procura outra — tem entidade demais pra ficar numa que não te cabe.
+> Se a organização só serve pra panelinha, você entrou no lugar errado.
+> Tem entidade demais na FT pra ficar numa que não te cabe.
 
 ## Fechamento
 
-Org nenhuma te forma sozinha. Mas a certa te tira do quarto, te ensina
-processo, às vezes gera hora e quase sempre treina a boca pra entrevista de
-estágio. Escolhe uma, entrega, depois expande.
+Organização nenhuma te forma sozinha. A certa te tira do quarto, te ensina
+processo, às vezes gera hora e quase sempre treina a boca pra entrevista
+de estágio. Escolhe uma, entrega, e só depois pensa em expandir.
 
 ### Macete
 
-- Antes de entrar, pergunta explicitamente se a carga gera hora complementar,
-  extensão, ou só “experiência” — e anota a resposta (muita org fala em ~30 h
-  complementares/semestre; confirma no teu caso).
+- Antes de entrar, pergunta se a carga gera hora complementar, extensão, ou só “experiência”, e anota a resposta. Muita organização fala em cerca de 30 horas complementares por semestre; confirma no teu caso.
