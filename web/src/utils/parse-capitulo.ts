@@ -32,10 +32,72 @@ function flushParagraph(alvo: Alvo, lines: string[]) {
 }
 
 /**
+ * Detecta padrão de IconBloco: **TIPO:** descrição ou **TIPO!** descrição
+ * Retorna { tipo, titulo, descricao } ou null
+ */
+function parseIconBloco(text: string): { tipo: string; titulo: string; descricao: string } | null {
+  const match = /^\*\*(IMPORTANTE|ALERTA|DICA|INFO)[!:]?\*\*\s+(.+)$/i.exec(text);
+  if (!match) return null;
+  const tipoRaw = match[1].toLowerCase();
+  const tipoMap: Record<string, string> = {
+    importante: 'importante',
+    alerta: 'alerta',
+    dica: 'dica',
+    info: 'info',
+  };
+  const tipo = tipoMap[tipoRaw] || 'info';
+  const descricao = match[2].trim();
+  return {
+    tipo,
+    titulo: match[1].replace(/!$/, ''),
+    descricao,
+  };
+}
+
+/**
+ * Detecta padrão de CaixaDestaque: **ALERTA!** ou **IMPORTANTE!** em linha separada
+ * (presume que tem conteúdo que segue)
+ */
+function parseCaixaDestaqueHeader(text: string): { tipo: string } | null {
+  const match = /^\*\*(IMPORTANTE|ALERTA|DICA)[!]?\*\*$/i.exec(text.trim());
+  if (!match) return null;
+  const tipoRaw = match[1].toLowerCase();
+  const tipoMap: Record<string, string> = {
+    importante: 'importante',
+    alerta: 'alerta',
+    dica: 'dica',
+  };
+  return { tipo: tipoMap[tipoRaw] || 'importante' };
+}
+
+/**
+ * Detecta padrão de ListaDecorada: linhas começando com → ou ★
+ */
+function detectListDecoradaMarker(line: string): { tipo: string; item: string } | null {
+  const setas = /^→\s+(.+)$/;
+  const simbolos = /^★\s+(.+)$/;
+
+  if (setas.test(line)) {
+    const match = setas.exec(line);
+    return { tipo: 'setas', item: match![1].trim() };
+  }
+  if (simbolos.test(line)) {
+    const match = simbolos.exec(line);
+    return { tipo: 'simbolos', item: match![1].trim() };
+  }
+  return null;
+}
+
+/**
  * Converte Markdown GFM do capítulo no modelo tipado da HQ.
  * `#` capa · `##` página · `###` panel · `>` balão
  * Listas → DICA! (padrão). Heading com "macete" → MACETE! (só o específico).
  * Conteúdo entre `#` e o primeiro `##` é anexado à primeira página.
+ *
+ * Novos padrões:
+ * - **IMPORTANTE:** ... → IconBloco
+ * - **ALERTA!** ... → CaixaDestaque
+ * - → item / ★ item → ListaDecorada
  */
 export function parseCapitulo(raw: string, fileSlug: string): Edicao {
   const body = stripFrontmatter(raw);
@@ -57,6 +119,8 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
   const paraLines: string[] = [];
   const listItens: string[] = [];
   const quoteLines: string[] = [];
+  const listaDecoradaItens: Array<{ tipo: string; items: string[] }> = [];
+  let listaDecoradaTipo: string | null = null;
 
   const getAlvo = (): Alvo => {
     if (!paginaAtual) return preambleAlvo;
@@ -70,8 +134,20 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
     quoteLines.length = 0;
   };
 
+  const flushListaDecorada = () => {
+    if (!listaDecoradaTipo || listaDecoradaItens.length === 0) return;
+    getAlvo().blocos.push({
+      type: 'lista-decorada' as const,
+      tipo: listaDecoradaTipo as 'setas' | 'simbolos' | 'numeros',
+      itens: listaDecoradaItens,
+    });
+    listaDecoradaItens.length = 0;
+    listaDecoradaTipo = null;
+  };
+
   const flushPending = () => {
     endQuote();
+    flushListaDecorada();
     const a = getAlvo();
     flushList(a, listItens, listKind);
     flushParagraph(a, paraLines);
@@ -88,7 +164,9 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
     listKind = /macete/i.test(text) ? 'macete' : 'dica';
   };
 
-  for (const line of lines) {
+  for (let idx = 0; idx < lines.length; idx++) {
+    const line = lines[idx];
+
     const heading = /^(#{1,3})\s+(.+)$/.exec(line);
     if (heading) {
       flushPending();
@@ -136,6 +214,7 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
     }
 
     if (/^>\s?/.test(line)) {
+      flushListaDecorada();
       flushList(getAlvo(), listItens, listKind);
       flushParagraph(getAlvo(), paraLines);
       quoteLines.push(line.replace(/^>\s?/, ''));
@@ -152,6 +231,7 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
 
     const imagem = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(line.trim());
     if (imagem) {
+      flushListaDecorada();
       flushList(getAlvo(), listItens, listKind);
       flushParagraph(getAlvo(), paraLines);
       getAlvo().blocos.push({
@@ -162,8 +242,80 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
       continue;
     }
 
+    // Teste IconBloco (inline em parágrafo)
+    const iconBlocoMatch = parseIconBloco(line.trim());
+    if (iconBlocoMatch && line.trim().startsWith('**')) {
+      flushListaDecorada();
+      flushList(getAlvo(), listItens, listKind);
+      flushParagraph(getAlvo(), paraLines);
+      getAlvo().blocos.push({
+        type: 'icon-bloco' as const,
+        icon: '📌',
+        tipo: iconBlocoMatch.tipo as 'info' | 'alerta' | 'importante' | 'dica',
+        titulo: iconBlocoMatch.titulo,
+        descricao: iconBlocoMatch.descricao,
+      });
+      continue;
+    }
+
+    // Teste CaixaDestaque (header line)
+    const caixaDestHeader = parseCaixaDestaqueHeader(line);
+    if (caixaDestHeader) {
+      flushListaDecorada();
+      flushList(getAlvo(), listItens, listKind);
+      flushParagraph(getAlvo(), paraLines);
+
+      // Coleta próximas linhas até linha vazia como conteúdo
+      const conteudoLines: string[] = [];
+      for (let jdx = idx + 1; jdx < lines.length; jdx++) {
+        const nextLine = lines[jdx];
+        if (nextLine.trim() === '' || /^(#{1,3}\s|>|[-*+]|\d+\.|!\[)/.test(nextLine)) {
+          break;
+        }
+        conteudoLines.push(nextLine);
+      }
+
+      if (conteudoLines.length > 0) {
+        idx += conteudoLines.length;
+        getAlvo().blocos.push({
+          type: 'caixa-destaque' as const,
+          tipo: caixaDestHeader.tipo as 'importante' | 'alerta' | 'dica',
+          conteudo: conteudoLines.join('\n').trim(),
+        });
+      }
+      continue;
+    }
+
+    // Teste ListaDecorada (→ ou ★)
+    const decoratedItem = detectListDecoradaMarker(line.trim());
+    if (decoratedItem) {
+      if (!listaDecoradaTipo) {
+        flushList(getAlvo(), listItens, listKind);
+        flushParagraph(getAlvo(), paraLines);
+        listaDecoradaTipo = decoratedItem.tipo;
+      }
+
+      if (listaDecoradaTipo === decoratedItem.tipo) {
+        listaDecoradaItens.push(decoratedItem.item);
+        continue;
+      } else {
+        // Tipo mudou, finalize e inicie novo
+        flushListaDecorada();
+        listaDecoradaTipo = decoratedItem.tipo;
+        listaDecoradaItens.push(decoratedItem.item);
+        continue;
+      }
+    } else if (listaDecoradaTipo && line.trim() !== '') {
+      // Fim da lista decorada se tiver outro conteúdo
+      if (!/^(#{1,3}\s|>|-\s|\*\s|\+\s|\d+\.)/.test(line)) {
+        flushListaDecorada();
+      }
+    }
+
+    // Listas comuns (legado - mantém compatibilidade)
     const listItem = /^(?:[-*+]|\d+\.)\s+(.+)$/.exec(line);
     if (listItem) {
+      flushListaDecorada();
       flushParagraph(getAlvo(), paraLines);
       listItens.push(listItem[1].trim());
       continue;
@@ -178,6 +330,7 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
     }
 
     if (line.trim() === '') {
+      flushListaDecorada();
       flushParagraph(getAlvo(), paraLines);
       continue;
     }

@@ -1,0 +1,33 @@
+---
+import { inlineMd } from '../utils/inline-md';
+
+interface Props {
+  tipo?: 'importante' | 'alerta' | 'dica';
+  titulo?: string;
+  conteudo: string;
+}
+
+const { tipo = 'importante', titulo, conteudo } = Astro.props;
+
+const temaMap = {
+  importante: 'red',
+  alerta: 'yellow',
+  dica: 'blue',
+};
+const tema = temaMap[tipo];
+
+const iconMap = {
+  importante: '⚠️',
+  alerta: '🚨',
+  dica: '💡',
+};
+const icon = iconMap[tipo];
+---
+
+<aside class:list={['caixa-destaque', `theme-${tema}`]} role="note" aria-label={tipo}>
+  <div style="display: flex; gap: 0.5rem; align-items: center;">
+    <span style="font-size: 1.4rem;" aria-hidden="true">{icon}</span>
+    {titulo && <h3 class="caixa-destaque__titulo">{titulo}</h3>}
+  </div>
+  <div class="caixa-destaque__conteudo" set:html={inlineMd(conteudo)} />
+</aside>

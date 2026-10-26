@@ -7,7 +7,7 @@ O **Manual do Bixo Ultimate** é um manual satírico e utilitário para calouros
 ## Objetivos
 
 1. Preservar e atualizar o conhecimento dos manuais históricos da FT/Unicamp.
-2. Entregar informação útil com humor: cada piada carrega um macete real.
+2. Humor em duas camadas: ~70% realidade satírica (ironizar a vivência como ela é) e ~30% sátira que embrulha um macete real. Ver [01-estilo-e-tom.md](01-estilo-e-tom.md).
 3. Produzir markdown limpo e portável, pronto para renderização web.
 
 ## Escopo

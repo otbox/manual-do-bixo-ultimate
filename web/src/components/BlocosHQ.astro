@@ -4,6 +4,10 @@ import { inlineMd } from '../utils/inline-md';
 import BalaoFala from './BalaoFala.astro';
 import CaixaMacete from './CaixaMacete.astro';
 import FiguraHQ from './FiguraHQ.astro';
+import IconBloco from './IconBloco.astro';
+import CaixaDestaque from './CaixaDestaque.astro';
+import ListaDecorada from './ListaDecorada.astro';
+import QuadroMini from './QuadroMini.astro';
 
 interface Props {
   blocos: Bloco[];
@@ -21,6 +25,39 @@ const { blocos } = Astro.props;
     }
     if (bloco.type === 'figura') {
       return <FiguraHQ src={bloco.src} alt={bloco.alt} />;
+    }
+    if (bloco.type === 'icon-bloco') {
+      return (
+        <IconBloco
+          icon={bloco.icon}
+          tipo={bloco.tipo}
+          titulo={bloco.titulo}
+          descricao={bloco.descricao}
+        />
+      );
+    }
+    if (bloco.type === 'caixa-destaque') {
+      return (
+        <CaixaDestaque
+          tipo={bloco.tipo}
+          titulo={bloco.titulo}
+          conteudo={bloco.conteudo}
+        />
+      );
+    }
+    if (bloco.type === 'lista-decorada') {
+      return (
+        <ListaDecorada tipo={bloco.tipo} itens={bloco.itens} />
+      );
+    }
+    if (bloco.type === 'quadro-mini') {
+      return (
+        <QuadroMini
+          titulo={bloco.titulo}
+          conteudo={bloco.conteudo}
+          subtipo={bloco.subtipo}
+        />
+      );
     }
     return <CaixaMacete itens={bloco.itens} variante={bloco.type} />;
   })

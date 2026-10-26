@@ -1,0 +1,464 @@
+/* HQ Patterns — Texturas, Decorações e Temas */
+
+/* —— Padrões de Texturas (CSS puro, sem imagens) —— */
+
+/* Halftone Ben Day: pontos radiais variados */
+.pattern-halftone {
+  background-image: radial-gradient(circle, rgba(11, 13, 18, 0.22) 1.1px, transparent 1.2px);
+  background-size: 4px 4px;
+}
+
+.pattern-halftone--dense {
+  background-image: radial-gradient(circle, rgba(11, 13, 18, 0.28) 0.8px, transparent 0.9px);
+  background-size: 2.5px 2.5px;
+}
+
+.pattern-halftone--light {
+  background-image: radial-gradient(circle, rgba(11, 13, 18, 0.15) 1.4px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+
+/* Linhas de velocidade: repeating-linear-gradient em ângulos */
+.pattern-lines {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 6px,
+    rgba(11, 13, 18, 0.12) 6px,
+    rgba(11, 13, 18, 0.12) 7px
+  );
+}
+
+.pattern-lines--vertical {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 5px,
+    rgba(11, 13, 18, 0.1) 5px,
+    rgba(11, 13, 18, 0.1) 6px
+  );
+}
+
+.pattern-lines--diagonal {
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 8px,
+    rgba(11, 13, 18, 0.14) 8px,
+    rgba(11, 13, 18, 0.14) 9px
+  );
+}
+
+/* Ruído sutil: padrão de pontos finos (simulando impressão offset) */
+.pattern-noise {
+  background-image:
+    radial-gradient(circle, rgba(11, 13, 18, 0.08) 1.2px, transparent 1.3px),
+    radial-gradient(circle, rgba(11, 13, 18, 0.04) 2.5px, transparent 2.6px);
+  background-size: 3px 3px, 7px 7px;
+}
+
+/* Cross-hatch: linhas cruzadas 45° + 135° */
+.pattern-crosshatch {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 4px,
+      rgba(11, 13, 18, 0.1) 4px,
+      rgba(11, 13, 18, 0.1) 5px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 4px,
+      rgba(11, 13, 18, 0.08) 4px,
+      rgba(11, 13, 18, 0.08) 5px
+    );
+}
+
+/* Dot screen: grid regular de pontos */
+.pattern-dots {
+  background: radial-gradient(
+    circle,
+    rgba(11, 13, 18, 0.18) 2px,
+    transparent 3px
+  );
+  background-size: 8px 8px;
+}
+
+.pattern-dots--small {
+  background: radial-gradient(
+    circle,
+    rgba(11, 13, 18, 0.15) 1.2px,
+    transparent 1.5px
+  );
+  background-size: 5px 5px;
+}
+
+/* —— Sombras 3D: Profundidade —— */
+
+.shadow-light {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.shadow-medium {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.shadow-strong {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Sombra com múltiplas camadas (3D profundo) */
+.shadow-3d {
+  box-shadow:
+    2px 2px 0 rgba(0, 0, 0, 0.15),
+    4px 4px 0 rgba(0, 0, 0, 0.25),
+    6px 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* —— Decorações de Canto (pseudo-elementos) —— */
+
+.corner-triangle {
+  position: relative;
+  overflow: visible;
+}
+
+/* Triângulo no canto superior-direito */
+.corner-triangle::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-bottom: 18px solid rgba(11, 13, 18, 0.25);
+  pointer-events: none;
+}
+
+/* Triângulo no canto inferior-esquerdo */
+.corner-triangle::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 0;
+  height: 0;
+  border-right: 12px solid transparent;
+  border-top: 12px solid rgba(11, 13, 18, 0.15);
+  pointer-events: none;
+}
+
+/* Barras angulares nos cantos */
+.corner-slash {
+  position: relative;
+  overflow: visible;
+}
+
+.corner-slash::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, transparent 48%, rgba(11, 13, 18, 0.2) 48%, rgba(11, 13, 18, 0.2) 52%, transparent 52%);
+  pointer-events: none;
+}
+
+/* Entalhos (triangle cutouts) nas bordas */
+.corner-notch {
+  position: relative;
+  overflow: visible;
+}
+
+.corner-notch::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--panel);
+  z-index: 1;
+}
+
+/* —— Temas por Capítulo —— */
+
+/* Tema Vermelho (BAS, Boas-vindas, Movimento, etc.) */
+.theme-red,
+[data-theme='red'] {
+  --theme-primary: #e10600;
+  --theme-light: #ff6b6b;
+  --theme-dark: #7a0018;
+  --theme-accent: #ffcccc;
+}
+
+/* Tema Azul (Campus, Burocracia, etc.) */
+.theme-blue,
+[data-theme='blue'] {
+  --theme-primary: #0057ff;
+  --theme-light: #5a9cff;
+  --theme-dark: #062a6e;
+  --theme-accent: #d5e5ff;
+}
+
+/* Tema Verde (Serviços, Permanência, etc.) */
+.theme-green,
+[data-theme='green'] {
+  --theme-primary: #00c2a8;
+  --theme-light: #00dcc5;
+  --theme-dark: #034d42;
+  --theme-accent: #d7fff6;
+}
+
+/* Tema Amarelo (Sobrevivência, etc.) */
+.theme-yellow,
+[data-theme='yellow'] {
+  --theme-primary: #ffd400;
+  --theme-light: #ffe66d;
+  --theme-dark: #9a3412;
+  --theme-accent: #fff3d6;
+}
+
+/* Tema Ciano (Organizações, Calourada, etc.) */
+.theme-cyan,
+[data-theme='cyan'] {
+  --theme-primary: #00e5ff;
+  --theme-light: #4fffff;
+  --theme-dark: #005f6f;
+  --theme-accent: #cce3ff;
+}
+
+/* Tema Roxo (Organizações, Calourada, etc.) */
+.theme-purple,
+[data-theme='purple'] {
+  --theme-primary: #7b2cbf;
+  --theme-light: #b284d6;
+  --theme-dark: #240046;
+  --theme-accent: #ebd9ff;
+}
+
+/* —— Blocos Temáticos com Cores —— */
+
+.block-theme-bg {
+  background: var(--theme-accent, #f0f0f0);
+  border-left: 5px solid var(--theme-primary, #0057ff);
+}
+
+.block-theme-title {
+  color: var(--theme-primary, #0057ff);
+  font-weight: 800;
+}
+
+.block-theme-badge {
+  background: var(--theme-primary, #0057ff);
+  color: #fff;
+}
+
+/* —— Variações de Borda —— */
+
+.block-thick-border {
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000;
+}
+
+.block-rounded-light {
+  border-radius: 6px;
+}
+
+.block-rotated {
+  transform: rotate(-2deg);
+}
+
+/* —— Estilos Compostos (para componentes) —— */
+
+/* Caixa destaque com tema */
+.caixa-destaque {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.75rem;
+  border: 4px solid #000;
+  background: var(--theme-accent, #fff);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.caixa-destaque::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--halftone);
+  background-size: 4px 4px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.caixa-destaque__titulo {
+  margin: 0;
+  font-family: var(--fonte-display, system-ui);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--theme-primary, #0057ff);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.caixa-destaque__conteudo {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Lista decorada com tema */
+.lista-decorada {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+}
+
+.lista-decorada li {
+  margin: 0.35rem 0;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.lista-decorada li::before {
+  content: '→';
+  position: absolute;
+  left: -1.2rem;
+  color: var(--theme-primary, #0057ff);
+  font-weight: 800;
+}
+
+.lista-decorada--simbolos li::before {
+  content: '★';
+  color: var(--theme-primary, #ffd400);
+}
+
+.lista-decorada--numeros li {
+  counter-increment: item;
+}
+
+.lista-decorada--numeros li::before {
+  content: counter(item) '.';
+  color: var(--theme-primary, #0057ff);
+  font-weight: 800;
+}
+
+/* Icon bloco com tema */
+.icon-bloco {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.65rem;
+  border: 3px solid var(--theme-primary, #0057ff);
+  background: rgba(0, 87, 255, 0.08);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.icon-bloco__icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.icon-bloco__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.icon-bloco__titulo {
+  margin: 0;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--theme-primary, #0057ff);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.icon-bloco__descricao {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Quadro mini com tema */
+.quadro-mini {
+  padding: 0.65rem;
+  border: 3px solid var(--theme-primary, #0057ff);
+  background: rgba(0, 87, 255, 0.04);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.quadro-mini__titulo {
+  margin: 0 0 0.35rem 0;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--theme-primary, #0057ff);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.quadro-mini__conteudo {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* —— Responsive —— */
+
+@media (max-width: 768px) {
+  .block-thick-border {
+    border-width: 4px;
+  }
+
+  .shadow-medium {
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .shadow-strong {
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .caixa-destaque {
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .icon-bloco {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .shadow-light {
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .shadow-medium {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .shadow-strong {
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.35);
+  }
+
+  .pattern-halftone {
+    background-size: 3px 3px;
+  }
+
+  .caixa-destaque {
+    padding: 0.6rem;
+    border-width: 3px;
+  }
+}

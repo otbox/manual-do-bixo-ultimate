@@ -4,7 +4,7 @@ Manual satírico para calouros da Unicamp, escrito em markdown como base para a 
 
 ## Sobre o projeto
 
-O Manual do Bixo Ultimate organiza e reescreve o conhecimento acumulado dos manuais históricos da Unicamp em documentos markdown independentes, com voz própria: um veterano contando diretamente pro calouro as coisas como elas são — serviços da universidade, macetes de sobrevivência, burocracias e vida acadêmica — com humor e respeito.
+O Manual do Bixo Ultimate organiza e reescreve o conhecimento acumulado dos manuais históricos da Unicamp em documentos markdown independentes, com voz própria: um veterano contando diretamente pro calouro as coisas como elas são — serviços da universidade, macetes de sobrevivência, burocracias e vida acadêmica. O humor trabalha em duas camadas (~70% realidade satírica, ~30% sátira que entrega macete), sempre com respeito. Ver [docs/01-estilo-e-tom.md](docs/01-estilo-e-tom.md).
 
 A versão web terá formato de **revista em quadrinhos folheável** (page-flip, sumário, balões de fala). Detalhes em [docs/06-versao-web.md](docs/06-versao-web.md).
 

@@ -1,60 +1,60 @@
 # Serviços Essenciais
 
-> Bandeco, saúde, ônibus, biblioteca e o lema “A FT proverá”: a
+> Bandeco, saúde, ônibus, biblioteca e o lema "A FT proverá": a
 > infraestrutura que te mantém de pé enquanto o semestre tenta o
 > contrário. Decora menos a sigla e mais o caminho até a fila.
 
-## Bandeco: fé, Pix e estômago
+## Bandeco: Fé, Pix e Estômago
 
 O RU — o bandeco — é a salvação de quem evita cozinhar e ainda assim
-precisa encher a barriga. No Campus 1 tem almoço e janta em dia letivo:
-prato, guarnição, opção vegetariana, salada, suco, sobremesa. A recarga é
-por Pix no app da carteirinha, ou dinheiro no caixa. Depois do Pix,
-valida no totem. Esse passo a galera esquece com fome.
+precisa encher a barriga. Terceirizado pela **Sapore S.A. desde setembro de 2022**,
+então aquele sabor que você não identifica é obra deles — e as reclamações também
+ricocheteiam entre universidade e empresa. Na FT, almoço e janta em dia letivo:
+prato, guarnição, opção vegetariana, salada, suco, sobremesa. A recarga é por
+Pix no app da carteirinha, ou dinheiro no caixa. Depois do Pix, valida no totem.
+Esse passo a galera esquece com fome.
 
-Por motivos que ninguém explica direito, problema elétrico e afins
-reaparecem. Às vezes a refeição do dia vira café da manhã — pão e fruta —
-ou o fluxo é redirecionado pra FCA. Fica atento e tem um plano B. Pão com
-fruta não é humilhação; é o que sobrou quando a cozinha apagou.
+Por motivos que ninguém explica direito — problema elétrico, hálito da terceirizada,
+ou simplesmente o calendário da vida — emergência de refeição reaparecem. Às vezes
+a refeição do dia vira café da manhã — pão e fruta — ou o fluxo é redirecionado
+pra FCA. A solução? Fica atento e tem um plano B. Pão com fruta não é humilhação;
+é o que sobrou quando a cozinha apagou e o motorista do bandeco virou ninja.
 
-Na bagatela de poucos reais, o consenso de veterano oscila. Muita gente
-evita o suco de sabor indefinido e trata peixe com cautela; frango assado
-e strogonoff ainda salvam a reputação do cardápio. Tem até lenda de gente
-famosa dizendo que engordou no bandeco. A gente ri, duvida do método, e
-olha o cardápio do dia mesmo assim. Cardápio da prefeitura mais o bot da
-galera te avisam antes de você entrar na fila no escuro. E sim, existe
-ranking de suco na cultura local, porque claro que existe.
+Na bagatela de poucos reais, o consenso de veterano oscila. Muita gente evita o
+suco de sabor indefinido e trata peixe com cautela; frango assado e strogonoff
+ainda salvam a reputação do cardápio, na maior parte dos dias. Tem até lenda de
+gente famosa dizendo que engordou no bandeco. A gente ri, duvida do método, e
+olha o cardápio do dia mesmo assim. Cardápio da prefeitura mais o bot da galera
+te avisam antes de você entrar na fila no escuro. E sim, existe ranking de suco
+na cultura local, porque claro que existe.
 
 ![…É complicado isso aí, cara…](../assets/hq/meme-complicado.jpg)
 
 ### O que o cardápio já foi
 
-Já teve dia lendário de salsicha no primeiro almoço de bixo, e o prato
-nunca mais voltou no mesmo ritmo. Em eras antigas circulava ovo à dorê e
-ovo cozido na mitologia do RU. Teve também a fase da troca de empresa:
-uns dois ou três meses em que a comida acabava e a solução era quibe ou
-nuggets em loop. Tempo difícil. No momento desta edição, o bandeco anda
-em fase melhor: ar-condicionado e tilápia, muitas vezes sem espinho, o
-que veterano trata como bênção silenciosa.
+Já teve dia lendário de salsicha no primeiro almoço de bixo, e o prato nunca mais
+voltou no mesmo ritmo. Em eras antigas circulava ovo à dorê e ovo cozido na mitologia
+do RU. Teve também a fase da troca de empresa: uns dois ou três meses em que a comida
+acabava e a solução era quibe ou nuggets em loop. Tempo difícil. No momento desta
+edição, o bandeco anda em fase melhor: ar-condicionado e tilápia, muitas vezes sem
+espinho, o que veterano trata como bênção silenciosa.
 
-### Macete
+### MACETE!
 
-- Evita **12h**: o Cotil desce pra comer e a fila vira castigo.
-- Evita **13h**: comida no fim, mais a turma que “prefere esse horário”, vira fila e risco de acabar.
+- Evita **12h**: o COTIL desce pra comer e a fila vira castigo.
+- Evita **13h**: comida no fim, mais a turma que "prefere esse horário", vira fila e risco de acabar.
 - Depois do Pix, valida o cartão ou o QR no totem antes de culpar a catraca.
 - Se o RU fechar ou redirecionar, FCA ou uma marmita na Cônego seguram o dia.
 
 ## A FT proverá
 
-Um lema que ecoa no campus é **“A FT proverá”**. Levado ao pé da letra, dá
+Um lema que ecoa no campus é **"A FT proverá"**. Levado ao pé da letra, dá
 pra resolver um pedaço da vida sem sair do terreno: acabou a bateria,
 carrega na tomada da FT e usa a internet da FT. Precisa de um banho
-decente, o banheiro do Cotil entra na conversa — água farta e, na lenda
+decente, o banheiro do COTIL entra na conversa — água farta e, na lenda
 local, quatro temperaturas. Fome, bandeco. Sono, dá pra achar um canto
 pra cochilar se você conhecer o mapa, com respeito ao espaço e sem
 transformar corredor em quarto.
-
-
 
 ![Quando a FT proverá… sono na biblioteca](../assets/hq/tirinha-dorme-biblioteca.jpg)
 
@@ -62,41 +62,51 @@ transformar corredor em quarto.
 
 > A FT proverá. Você fica com o juízo de não deixar bagunça pra quem limpa.
 
-## CECOM, o postinho da FT
+## CECOM, SAPPE, HES e FOP: o Tripé da Saúde
 
-O CECOM é o postinho de saúde dentro da FT. Serve bem pra emergência
-leve: dor de garganta, dor de barriga, gripe, mal-estar, espinho na
-garganta. Não espere raio-X nem exame de sangue completo ali. Osso
-quebrado e emergência pesada vão pro hospital. Dá pra agendar dentista e
-consulta eletiva; em muitos casos o encaminhamento é pra Barão. Usa cedo,
-não só quando a coisa já estiver feia.
+O CECOM é o postinho de saúde dentro da FT, aberto **7h às 19h de segunda
+a sexta**. Serve bem pra emergência leve: dor de garganta, dor de barriga,
+gripe, mal-estar, espinho na garganta. Não espere raio-X nem exame de sangue
+completo ali. Vacinação, consulta eletiva, encaminhamentos passam por CECOM.
 
-## Intercamp e circulares
+Saúde mental e psicologia ficam com **SAPPE** — a universidade mantém atendimento
+pra quem precisa arrancar o peso de dentro. Usa cedo, não espere ficar feia.
+
+Osso quebrado e emergência pesada vão pro **HES (Hospital Estadual de Sumaré)**
+— é ali que a coisa fica séria. Dente é com a **FOP (Faculdade de Odontologia
+de Piracicaba)**.
+
+> Pedir ajuda faz parte do caminho, no mesmo espírito de quem pede bolsa:
+> você usa o serviço que a universidade mantém pra isso.
+
+## Intercamp e Circulares: Saindo de Limeira
 
 O Intercamp é o jeito da universidade te levar a Barão. Há um pacote de
 viagens por semestre: reserva no sistema e aproveita pra eletiva, evento
-ou palestra. O circular gratuito liga FT e FCA em dia letivo. O fretado
-da Linha 84 cobre Limeira e Barão, também com reserva. Ônibus urbano SOU
+ou palestra. O circular **gratuito** liga FT e FCA em dia letivo (linhas 91 e 98).
+O fretado da Linha 84 cobre Limeira e Barão, também com reserva. Ônibus urbano SOU
 e o passe escolar completam a malha. Horário muda. Confere a tabela
 oficial, não um print de 2022.
 
-### Reserva, fila e o boato do motorista
+### Reserva, Fila e o Boato do Motorista
 
-Corre história de entrar sem reserva: chegar cedo, “ser amigo do
-motorista”, improvisar. Isso é aposta. O plano é a reserva. Se não tiver
+Corre história de entrar sem reserva: chegar cedo, "ser amigo do
+motorista", improvisar. Isso é aposta. O plano é a reserva. Se não tiver
 vaga, usa a fila de espera oficial quando ela existir — e chega cedo
 mesmo assim. Contar com jeitinho funciona até o dia em que a lista é
 conferida e você fica no asfalto com eletiva em Barão.
 
+**MACETE!**
 - Reserva o Intercamp assim que souber a data da eletiva ou do evento.
 - Circular FT–FCA: salva o [PDF de horários](https://prefeituralimeira.unicamp.br/wp-content/uploads/sites/35/2025/01/Horarios.pdf) no celular, offline.
 - Passe escolar: trata como documento que você precisa.
+- Linhas 91 e 98 (intercampi **gratuitas**) conectam Limeira e Campinas/Barão em frequência regular.
 - Portal de transporte de Limeira: [prefeituralimeira.unicamp.br/transporte](https://prefeituralimeira.unicamp.br/transporte/).
 - [Bot do Bandeco](https://chat.whatsapp.com/FL4oCDOIOmTJI405NNvUS9) e [grupo do circular](https://chat.whatsapp.com/Glb6vxcBfiCCbUnHr432bp) no Zap. Link muda; a edição Links Úteis é o lugar pra conferir.
 
-## Biblioteca e Wi-Fi
+## Biblioteca e Wi-Fi: o Templo do CR
 
-A biblioteca setorial, com cabine, vira território sério em época de
+A **Biblioteca Setorial (SBU)**, com cabine, vira território sério em época de
 prova. O Wi-Fi **Eduroam** usa o login da DAC (`SEU_RA@unicamp.br` e a
 senha da DAC). Na FT também existe a rede local, com **senha da FT** —
 não é a da DAC. A impressão no
@@ -113,7 +123,7 @@ PDFs do circular e a lista completa de links ficam na edição **Links
 
 Serviço bom é serviço que você testa na primeira semana, não na vigésima,
 com fome e o Pix falhando. Faz o tour: RU, CECOM, ponto do circular,
-biblioteca, totem. E decora que meio-dia, com o Cotil descendo, não é
+biblioteca, totem. E decora que meio-dia, com o COTIL descendo, não é
 horário inteligente.
 
 > Fome, gripe e deslocamento resolvidos cedo sobram energia pro resto do

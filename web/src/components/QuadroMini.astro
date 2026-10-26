@@ -1,0 +1,26 @@
+---
+import { inlineMd } from '../utils/inline-md';
+
+interface Props {
+  titulo: string;
+  conteudo: string;
+  subtipo?: 'info' | 'alerta';
+  tema?: 'red' | 'blue' | 'green' | 'yellow' | 'cyan' | 'purple';
+}
+
+const { titulo, conteudo, subtipo = 'info', tema = 'blue' } = Astro.props;
+
+const tipoLabel = {
+  info: 'Informação',
+  alerta: 'Alerta',
+};
+---
+
+<aside
+  class:list={['quadro-mini', `theme-${tema}`]}
+  role="note"
+  aria-label={tipoLabel[subtipo]}
+>
+  <h4 class="quadro-mini__titulo">{titulo}</h4>
+  <p class="quadro-mini__conteudo" set:html={inlineMd(conteudo)} />
+</aside>

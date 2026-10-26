@@ -1,0 +1,29 @@
+---
+interface Props {
+  tipo?: 'setas' | 'simbolos' | 'numeros';
+  itens: string[];
+  tema?: 'red' | 'blue' | 'green' | 'yellow' | 'cyan' | 'purple';
+}
+
+const { tipo = 'setas', itens, tema = 'blue' } = Astro.props;
+
+const ariaLabel = {
+  setas: 'Lista com setas',
+  simbolos: 'Lista com símbolos',
+  numeros: 'Lista numerada',
+};
+---
+
+<ul
+  class:list={[
+    'lista-decorada',
+    `lista-decorada--${tipo}`,
+    `theme-${tema}`,
+  ]}
+  role="list"
+  aria-label={ariaLabel[tipo]}
+>
+  {itens.map((item) => (
+    <li role="listitem">{item}</li>
+  ))}
+</ul>

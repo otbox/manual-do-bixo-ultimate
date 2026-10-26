@@ -3,7 +3,32 @@ export type Bloco =
   | { type: 'balao'; texto: string }
   | { type: 'dica'; itens: string[] }
   | { type: 'macete'; itens: string[] }
-  | { type: 'figura'; src: string; alt: string };
+  | { type: 'figura'; src: string; alt: string }
+  // Novos tipos para variedade visual
+  | {
+    type: 'icon-bloco';
+    icon: string;
+    tipo: 'info' | 'alerta' | 'importante' | 'dica';
+    titulo: string;
+    descricao: string;
+  }
+  | {
+    type: 'caixa-destaque';
+    tipo: 'importante' | 'alerta' | 'dica';
+    titulo?: string;
+    conteudo: string;
+  }
+  | {
+    type: 'lista-decorada';
+    tipo: 'setas' | 'simbolos' | 'numeros';
+    itens: string[];
+  }
+  | {
+    type: 'quadro-mini';
+    titulo: string;
+    conteudo: string;
+    subtipo?: 'info' | 'alerta';
+  };
 
 export type PanelHQ = {
   id: string;

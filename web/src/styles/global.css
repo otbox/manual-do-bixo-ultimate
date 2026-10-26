@@ -1,4 +1,8 @@
 /* Manual do Bixo Ultimate — gibi moderno de heróis */
+
+/* Importar padrões HQ (texturas, decorações, temas) */
+@import './hq-patterns.css';
+
 :root {
   --ink: #0b0d12;
   --ink-2: #161a24;
@@ -373,10 +377,12 @@ h3,
 }
 
 @keyframes pulse-cta {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(4px);
   }
@@ -386,91 +392,117 @@ h3,
 .capa--boas {
   background: linear-gradient(155deg, #ff3b30 0%, #e10600 42%, #5c0012 100%);
 }
+
 .capa--campus {
   background: linear-gradient(155deg, #1a6bff 0%, #0057ff 40%, #062a6e 100%);
 }
+
 .capa--campus .capa__subtitulo {
   color: #cfe0ff;
 }
+
 .capa--campus .capa__estampa,
 .capa--campus .capa__icone-wrap {
   background: var(--hero-cyan);
 }
+
 .capa--servicos {
   background: linear-gradient(155deg, #00c2a8 0%, #008f7a 45%, #034d42 100%);
 }
+
 .capa--servicos .capa__subtitulo {
   color: #d7fff6;
 }
+
 .capa--servicos .capa__estampa,
 .capa--servicos .capa__icone-wrap {
   background: #fff;
   color: #034d42;
 }
+
 .capa--burocracia {
   background: linear-gradient(155deg, #5b6578 0%, #2f3645 48%, #12151c 100%);
 }
+
 .capa--burocracia .capa__subtitulo {
   color: #d5dae6;
 }
+
 .capa--burocracia .capa__estampa,
 .capa--burocracia .capa__icone-wrap {
   background: #fff;
   color: #12151c;
 }
+
 .capa--orgs {
   background: linear-gradient(155deg, #7b2cbf 0%, #5a189a 42%, #240046 100%);
 }
+
 .capa--orgs .capa__subtitulo {
   color: #ebd9ff;
 }
+
 .capa--orgs .capa__estampa {
   background: var(--hero-yellow);
 }
+
 .capa--permanencia {
   background: linear-gradient(155deg, #2a9d8f 0%, #1d6f66 45%, #0b3d38 100%);
 }
+
 .capa--permanencia .capa__subtitulo {
   color: #c8f5ef;
 }
+
 .capa--permanencia .capa__estampa,
 .capa--permanencia .capa__icone-wrap {
   background: #fff;
   color: #0b3d38;
 }
+
 .capa--sobrevivencia {
   background: linear-gradient(155deg, #ffb703 0%, #fb8500 42%, #9a3412 100%);
 }
+
 .capa--sobrevivencia .capa__subtitulo {
   color: #fff3d6;
 }
+
 .capa--sobrevivencia .capa__titulo {
   text-shadow:
     4px 4px 0 #000,
     -2px 0 0 #fff;
 }
+
 .capa--calourada {
   background: linear-gradient(155deg, #ff006e 0%, #8338ec 48%, #3a0ca3 100%);
 }
+
 .capa--calourada .capa__subtitulo {
   color: #ffe3f1;
 }
+
 .capa--calourada .capa__estampa,
 .capa--calourada .capa__icone-wrap {
   background: var(--hero-cyan);
 }
+
 .capa--movimento {
   background: linear-gradient(155deg, #ef233c 0%, #d90429 40%, #2b2d42 100%);
 }
+
 .capa--movimento .capa__subtitulo {
   color: #ffd6db;
 }
+
 .capa--links {
   background: linear-gradient(155deg, #0ea5e9 0%, #0369a1 42%, #0c4a6e 100%);
 }
+
 .capa--links .capa__subtitulo {
   color: #e0f2fe;
 }
+
 .capa--links .capa__estampa,
 .capa--links .capa__icone-wrap {
   background: #fff;
@@ -480,9 +512,11 @@ h3,
 .capa--volume {
   background: linear-gradient(155deg, #111827 0%, #1f2937 38%, #0b0d12 100%);
 }
+
 .capa--volume .capa__tagline {
   color: var(--hero-cyan);
 }
+
 .capa--volume .capa__estampa,
 .capa--volume .capa__icone-wrap {
   background: var(--hero-cyan);
@@ -572,6 +606,7 @@ h3,
 .capa-motivo--grid .capa__slash {
   background: linear-gradient(90deg, #00e5ff, #ffffff);
 }
+
 .capa-motivo--grid .capa__motif {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.18) 2px, transparent 2px),
@@ -586,6 +621,7 @@ h3,
   transform: skewY(8deg);
   background: linear-gradient(90deg, #fff, #9effe8);
 }
+
 .capa-motivo--radar .capa__motif {
   background:
     radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.35) 0 8%, transparent 9%),
@@ -596,13 +632,12 @@ h3,
 .capa-motivo--forms .capa__slash {
   display: none;
 }
+
 .capa-motivo--forms .capa__motif {
   background:
-    repeating-linear-gradient(
-      0deg,
+    repeating-linear-gradient(0deg,
       transparent 0 28px,
-      rgba(255, 255, 255, 0.12) 28px 30px
-    );
+      rgba(255, 255, 255, 0.12) 28px 30px);
   opacity: 0.7;
 }
 
@@ -611,6 +646,7 @@ h3,
   inset: 18% -25% auto;
   transform: skewY(-16deg);
 }
+
 .capa-motivo--guild .capa__motif {
   background:
     radial-gradient(circle at 15% 80%, rgba(255, 212, 0, 0.45) 0 12%, transparent 13%),
@@ -623,6 +659,7 @@ h3,
   inset: 40% -15% auto;
   height: 22%;
 }
+
 .capa-motivo--shield .capa__motif {
   background:
     linear-gradient(135deg, transparent 46%, rgba(255, 255, 255, 0.22) 46% 54%, transparent 54%);
@@ -635,13 +672,12 @@ h3,
   transform: skewY(-4deg);
   opacity: 0.35;
 }
+
 .capa-motivo--alert .capa__motif {
   background:
-    repeating-linear-gradient(
-      -28deg,
+    repeating-linear-gradient(-28deg,
       rgba(0, 0, 0, 0.22) 0 14px,
-      transparent 14px 28px
-    );
+      transparent 14px 28px);
   opacity: 0.55;
 }
 
@@ -649,6 +685,7 @@ h3,
   background: linear-gradient(90deg, #00e5ff, #ffd400, #ff006e);
   height: 30%;
 }
+
 .capa-motivo--party .capa__motif {
   background:
     radial-gradient(circle at 20% 30%, #fff 0 3px, transparent 4px),
@@ -663,6 +700,7 @@ h3,
   transform: skewY(-18deg);
   inset: 22% -30% auto;
 }
+
 .capa-motivo--megaphone .capa__motif {
   background:
     linear-gradient(105deg, transparent 58%, rgba(0, 0, 0, 0.28) 58% 62%, transparent 62%),
@@ -1308,9 +1346,9 @@ h3,
   box-sizing: border-box;
 }
 
-.hq-book .page > .pagina-hq,
-.hq-book .page > .capa,
-.hq-book .page > .sumario-pagina {
+.hq-book .page>.pagina-hq,
+.hq-book .page>.capa,
+.hq-book .page>.sumario-pagina {
   height: 100%;
   max-height: 100%;
   box-sizing: border-box;
@@ -1554,35 +1592,45 @@ h3,
 .edicao-card--boas {
   outline-color: #e10600;
 }
+
 .edicao-card--campus {
   outline-color: #0057ff;
 }
+
 .edicao-card--servicos {
   outline-color: #00c2a8;
 }
+
 .edicao-card--burocracia {
   outline-color: #8b95a8;
 }
+
 .edicao-card--orgs {
   outline-color: #7b2cbf;
 }
+
 .edicao-card--permanencia {
   outline-color: #2a9d8f;
 }
+
 .edicao-card--sobrevivencia {
   outline-color: #fb8500;
 }
+
 .edicao-card--calourada {
   outline-color: #ff006e;
 }
+
 .edicao-card--movimento {
   outline-color: #d90429;
 }
+
 .edicao-card--links {
   outline-color: #0ea5e9;
 }
 
 @media (max-width: 720px) {
+
   /* No mobile a aba lateral cobre o gibi — sumário via página + botão dos controles. */
   .marcador {
     display: none !important;

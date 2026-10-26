@@ -1,0 +1,28 @@
+---
+import { inlineMd } from '../utils/inline-md';
+
+interface Props {
+  icon: string;
+  tipo?: 'info' | 'alerta' | 'importante' | 'dica';
+  titulo: string;
+  descricao: string;
+}
+
+const { icon, tipo = 'info', titulo, descricao } = Astro.props;
+
+const temaMap = {
+  info: 'blue',
+  alerta: 'yellow',
+  importante: 'red',
+  dica: 'cyan',
+};
+const tema = temaMap[tipo];
+---
+
+<div class:list={['icon-bloco', `theme-${tema}`]} role="note">
+  <div class="icon-bloco__icon" aria-hidden="true">{icon}</div>
+  <div class="icon-bloco__content">
+    <h4 class="icon-bloco__titulo">{titulo}</h4>
+    <p class="icon-bloco__descricao" set:html={inlineMd(descricao)} />
+  </div>
+</div>

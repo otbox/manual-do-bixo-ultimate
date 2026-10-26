@@ -27,32 +27,28 @@ portal da DAC, cedo — não no desespero da rematrícula.
 
 ## Moodle, GGTE e o resto do kit
 
-O Moodle é o padrão: plano de ensino, PDF, prazo, fórum —
-[moodle.ggte.unicamp.br](https://moodle.ggte.unicamp.br/) (tem app). O
-[GGTE](https://ggte.unicamp.br/) concentra o mapa das ferramentas. Alguns
-professores usam o Classroom no mesmo e-mail da DAC. Na primeira semana,
-baixa o plano de desenvolvimento da disciplina. Ali estão P1, P2, exame
-e laboratório. Dá pra extrair as datas do PDF e jogar no Google Agenda
-(arquivo `.ics`), com alarme 24 horas antes. Evita a clássica “esqueci
-que era amanhã”.
+O Moodle é o padrão — plano de ensino, PDF, prazo, fórum, tudo ali. Alguns
+professores usam o Classroom no mesmo e-mail da DAC — sim, é o mesmo lugar,
+você lê em dois portais porque integração é assunto do futuro, e enquanto
+isso você dobra entre sete portais que não conversam. Na primeira semana, desce
+o plano de desenvolvimento da disciplina (P1, P2, exame, laboratório), extrai
+as datas e joga no Google Agenda com alarme 24h antes. Evita a clássica
+"esqueci que era amanhã".
 
-Aluno da Unicamp também leva [Coursera](https://www.coursera.org/) no
-e-mail institucional,
-[Office 365](https://office365.unicamp.br/idp/Authn/UserPassword) com
-armazenamento na nuvem, e o
-[GDE](https://grade.daconline.unicamp.br/login/) pra avaliar disciplina e
-professor. Glossário e eletivas:
-[glossário da DAC](https://www.dac.unicamp.br/portal/vida-academica/graduacao/matricula/matricula-em-disciplinas/glossario-da-dac)
-e o
-[DAC explica disciplinas](https://www.dac.unicamp.br/portal/noticias/2024/11/29/dac-explica-disciplinas-graduacao).
-Bolsa e certificado de evento (PMU, oficina) passam pelo
-[SIG/SAE](https://sistemas.sae.unicamp.br/sig/). A lista completa de URLs
-está na edição **Links Úteis**.
+Você também ganha Coursera no e-mail institucional, Office 365 com
+armazenamento, GDE pra avaliar professor e disciplina (sim, professor sabe
+que todo mundo vê), e um dicionário inteiro de portais — glossário, SAE pra
+bolsa e certificado de evento, relatório de extensão. Cada coisa num lugar.
+
+### Macete
+
+Links dos portais estão em **Links Úteis** (próxima seção). Salva lá que vai
+precisar mais de uma vez.
 
 ## CR e CP, sem mistificação
 
 **CP** (Coeficiente de Progressão) mostra quanto do curso você já fez.
-Chega em **1**, concluiu. “CPF”, na boca da galera, costuma ser o CP
+Chega em **1**, concluiu. "CPF", na boca da galera, costuma ser o CP
 projetado pro próximo semestre, se tudo der certo. Existem matérias
 bloqueadas por CP — pré-requisito no estilo AA4__, em que os dois últimos
 dígitos pedem certo nível de progressão. O CP também pesa no ranking de
@@ -69,7 +65,7 @@ de aprovar estágio não obrigatório. Toda matéria conta no CR, inclusive
 eletiva. Escolher uma só pra puxar média também aparece no histórico, pra
 bem ou pra mal.
 
-**Eletiva “coxa”** é matéria cujo objetivo principal é subir a média.
+**Eletiva "coxa"** é matéria cujo objetivo principal é subir a média.
 Consulta um veterano do teu curso e confirma o oferecimento no semestre:
 a lista muda, o professor muda. Se você quer carreira acadêmica, equilibra
 o fácil com o que pesa de verdade.
@@ -82,52 +78,73 @@ o fácil com o que pesa de verdade.
 
 ## Reingresso
 
-Reingresso é o jeito de continuar na universidade mudando de curso —
-útil em irmãos tipo TADS e BSI, ou em engenharias com ciclo básico
-parecido, na casa dos 50%. O processo é meio nebuloso: conversa com o
-**coordenador** do curso de destino. Em muitos relatos, o caminho começa
-com CP alto (acima de 0,5) naquele outro curso, e a tabela de reingresso
-costuma ser dos dois lados. Quando o CP chega a 1 no curso atual, você
-concluiu; o semestre no destino depende do CP de lá. Adianta matéria do
-outro curso cedo. Deixar pro final, com estágio em cima, aperta o
-cronograma sem piedade.
+Reingresso é o jeito de continuar na universidade mudando de curso. Parece
+burocracia simples até você conversar com o **coordenador** — aí o caminho
+fica meio nebuloso porque, bem, cada caso depende de ciclo básico compartilhado,
+CP em outros cursos, tabela de reingresso e regras que mudam por edital. O jeito
+clássico: CP alto no outro curso (acima de 0,5, pra ter tração), simulação no
+SIGA pro destino, adianta matéria comum cedo porque deixar pro final com estágio
+em cima aperta o cronograma sem piedade e ninguém quer acordar no final do
+semestre com 4 matérias pela frente.
+
+**MACETE!** Não deixa essa conversa pra última hora. Cronograma só aperta com o tempo.
 
 ## Catálogo antigo e a lenda do diploma
 
-Matéria compartilhada — Cálculo I, por exemplo — empurra CP em mais de um
-curso. Corre o boato de que dá pra terminar em catálogo antigo ou
-posterior, do próprio curso ou de outro, pra evitar alguma matéria. Isso
-é território de coordenação. Regra muda, edital manda, boato mente. O
-exemplo clássico é catálogo de BSI sem hora de extensão, contra os
-catálogos seguintes. Se for tentar qualquer atalho de diploma, marca
-reunião com a coordenação. Plano montado só em conversa de grupo costuma
-quebrar na secretaria.
+Corre o boato que dá pra terminar em catálogo antigo pra evitar uma matéria
+chata ou uma carga extra. É verdade que matéria compartilhada — Cálculo I,
+por exemplo — carrega CP em vários cursos. Mas "terminar fora do catálogo
+vigente" é um daqueles mitos que faz sentido na boca da galera e some quando
+chega na secretaria. Regra muda por edital. Boato mente. O absurdo é real:
+nem você nem a universidade sabia disso até conversar.
+
+Se for tentar qualquer atalho, marca reunião com coordenação. Plano montado
+só em grupo do Zap quebra na secretaria com certeza.
+
+**MACETE!** Qualquer história sobre "jeito de evitar matéria" vale confirmar na coordenação antes de virar plano.
 
 ## PIF — Programa Integrado de Formação
 
-O PIF é um jeito de cursar disciplina de pós ainda na graduação e
-adiantar caminho de mestrado. Os requisitos típicos — confirma no edital
-do ano — são poucas dependências, um professor parceiro, **CP acima de
-0,70**, e um projetinho curto, na casa de 8 páginas, no clima de IC, pra
-mostrar interesse. Você não fica preso ao projeto nem à área depois. O
-crédito feito, porém, costuma valer só por um prazo (cerca de 2 anos) se
-você não entrar na pós. Planeja com calma.
+O PIF é o jeito de cursar disciplina de pós ainda na graduação — caminho que
+talvez encurte o mestrado depois, ou talvez não, depende. Os requisitos típicos
+— confirma no edital do ano — são poucos de tudo (pré-requisito baixo), um
+professor interessado em você, CP acima de 0,70, e um projetinho curto, na casa
+de 8 páginas, pra mostrar que você entende o que está fazendo. Você não fica
+preso ao projeto nem à área depois.
+
+Agora, detalhe que pega gente: o crédito vale só por uns 2 anos se você não
+entrar na pós. Não é infinito. Planeja com calma se o mestrado é plano B.
+
+**MACETE!** Confirma tudo com orientador. Projeto de dois anos que expira é projeto que precisa de acompanhamento.
 
 ### Mestrado na FT
 
 A entrada depende muito do professor: CR, participação, entrevista, carta
-de recomendação, e o famoso “gostou da sua cara”. A multidisciplinaridade
+de recomendação, e o famoso "gostou da sua cara". A multidisciplinaridade
 da FT existe no papel; na prática, proposta genérica demais sofre. Quanto
 mais presença e interesse você mostrar na graduação, mais fácil alguém te
 puxar.
+
+## Links Úteis
+
+Todos os portais em um lugar. Salva aí:
+
+- [Moodle GGTE](https://moodle.ggte.unicamp.br/) (padrão, com app)
+- [GGTE](https://ggte.unicamp.br/) (mapa das ferramentas)
+- [Coursera](https://www.coursera.org/) (acesso institucional)
+- [Office 365](https://office365.unicamp.br/idp/Authn/UserPassword) (nuvem)
+- [GDE](https://grade.daconline.unicamp.br/login/) (avaliação de professor)
+- [Glossário DAC](https://www.dac.unicamp.br/portal/vida-academica/graduacao/matricula/matricula-em-disciplinas/glossario-da-dac)
+- [DAC Explica Disciplinas](https://www.dac.unicamp.br/portal/noticias/2024/11/29/dac-explica-disciplinas-graduacao)
+- [SIG/SAE](https://sistemas.sae.unicamp.br/sig/) (bolsa, certificado, evento)
 
 ## Fechamento
 
 Burocracia resolvida some. Burocracia ignorada volta em três atos, em
 geral na semana em que todo mundo está no mesmo portal. Conta, relatório
-final, plano de ensino, simulação de CR. Se for o caso de reingresso ou
-PIF, a coordenação entra no loop junto com o boato de corredor — de
-preferência antes do boato.
+final, plano de ensino, simulação de CR. Se for o caso de reingresso, PIF
+ou processo administrativo, a coordenação entra no loop junto com o boato
+de corredor — de preferência antes do boato.
 
-> Se alguém disser “é só no DAC”, separa um tempo e um lanche. O portal
+> Se alguém disser "é só no DAC", separa um tempo e um lanche. O portal
 > não tem pressa. A tua rematrícula tem.
