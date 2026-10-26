@@ -22,12 +22,6 @@ export type Bloco =
     type: 'lista-decorada';
     tipo: 'setas' | 'simbolos' | 'numeros';
     itens: string[];
-  }
-  | {
-    type: 'quadro-mini';
-    titulo: string;
-    conteudo: string;
-    subtipo?: 'info' | 'alerta';
   };
 
 export type PanelHQ = {

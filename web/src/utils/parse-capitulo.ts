@@ -265,11 +265,22 @@ export function parseCapitulo(raw: string, fileSlug: string): Edicao {
       flushList(getAlvo(), listItens, listKind);
       flushParagraph(getAlvo(), paraLines);
 
-      // Coleta próximas linhas até linha vazia como conteúdo
+      // Coleta próximas linhas até linha vazia ou próximo bloco estruturado
       const conteudoLines: string[] = [];
       for (let jdx = idx + 1; jdx < lines.length; jdx++) {
         const nextLine = lines[jdx];
-        if (nextLine.trim() === '' || /^(#{1,3}\s|>|[-*+]|\d+\.|!\[)/.test(nextLine)) {
+        // Detecta fim de conteúdo: linhas vazias, headings, quotes, figuras, listas, ou novas anotações
+        if (
+          nextLine.trim() === '' ||
+          /^#{1,3}\s/.test(nextLine) ||
+          /^>/.test(nextLine) ||
+          /^[-*+]\s/.test(nextLine) ||
+          /^\d+\./.test(nextLine) ||
+          /^!\[/.test(nextLine) ||
+          /^→\s/.test(nextLine) ||
+          /^★\s/.test(nextLine) ||
+          /^\*\*(IMPORTANTE|ALERTA|DICA)[!]?\*\*/.test(nextLine)
+        ) {
           break;
         }
         conteudoLines.push(nextLine);

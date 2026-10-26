@@ -7,7 +7,6 @@ import FiguraHQ from './FiguraHQ.astro';
 import IconBloco from './IconBloco.astro';
 import CaixaDestaque from './CaixaDestaque.astro';
 import ListaDecorada from './ListaDecorada.astro';
-import QuadroMini from './QuadroMini.astro';
 
 interface Props {
   blocos: Bloco[];
@@ -48,15 +47,6 @@ const { blocos } = Astro.props;
     if (bloco.type === 'lista-decorada') {
       return (
         <ListaDecorada tipo={bloco.tipo} itens={bloco.itens} />
-      );
-    }
-    if (bloco.type === 'quadro-mini') {
-      return (
-        <QuadroMini
-          titulo={bloco.titulo}
-          conteudo={bloco.conteudo}
-          subtipo={bloco.subtipo}
-        />
       );
     }
     return <CaixaMacete itens={bloco.itens} variante={bloco.type} />;
