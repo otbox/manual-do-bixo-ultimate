@@ -1,14 +1,7 @@
 {
-  "verdict": "CHANGES_REQUESTED",
+  "verdict": "APPROVED",
   "findings": [
-    {
-      "label": "QuadroMini dead code",
-      "description": "Componente QuadroMini implementado em novo arquivo e roteado em BlocosHQ.astro, mas nenhuma sintaxe markdown o gera. Remove o import e case em BlocosHQ.astro, ou adicione suporte parser (ex: sintaxe `### [!BOX] Título`)."
-    },
-    {
-      "label": "CaixaDestaque lookahead incomplete",
-      "description": "Regex para terminar coleta de conteúdo cobre blocos estruturados comuns, mas linhas que não casem nenhum padrão (ex: parágrafo puro com markdown inline que não inicia com `**TIPO:**`) são capturadas. Adicione testes unitários para edge cases ou documente limite de suporte."
-    }
+    "Testes documentados não rodam automaticamente — A documentação de 21 casos de teste foi criada em `.test.ts` mas permanece comentada. Sem execução contínua, regressões no lookahead de CaixaDestaque podem passar despercebidas se o markdown nos capítulos mudasse. Descomente os testes e adicione vitest ao pipeline de CI."
   ],
   "reviewDoc": "/home/otbox/Documentos/Projetos/manual-do-bixo-ultimate/.agents/tasks/manual-tom/graficos-review.md"
 }

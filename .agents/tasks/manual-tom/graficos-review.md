@@ -1,87 +1,72 @@
-# Gráficos e Variedade Visual na HQ Astro — Blocos, Parser e Padrões CSS
+# Gráficos e Variedade de Blocos na HQ Astro — Iteração 2
 
-A implementação adiciona quatro novos tipos de blocos visuais (IconBloco, CaixaDestaque, ListaDecorada e QuadroMini) com suporte em parser estendido, padrões CSS puro (halftone, linhas, ruído, crosshatch, dots) e sistema de temas por capítulo. Compatibilidade retroativa é mantida: markdown legado (headings, quotes, listas, figuras) continua intacto, e novos marcadores (`→`, `★`, `**IMPORTANTE:**`) rodam em precedência superior sem quebrar blocos antigos. Build sucesso em todos os 12 capítulos; novas variações visuais estão integradas ao pipeline sem tocar em componentes-chave (FlipBook, PaginaHQ). Performance é CSS-first (sem SVG/JS pesado desnecessário).
+A iteração corrige dois findings críticos da pass anterior: remoção do componente QuadroMini (que não tinha gerador de sintaxe) e documentação de testes para o lookahead de CaixaDestaque. O build passou com sucesso nos 12 capítulos; compatibilidade retroativa preservada; FlipBook e PaginaHQ não foram tocados.
 
-**Watch for:**
-- (confirmed) QuadroMini é dead code — componente implementado, roteado em BlocosHQ.astro, mas nenhuma sintaxe markdown o gera. Remover ou adicionar suporte parser em próximo passo.
-- (likely) CaixaDestaque lookahead regex (`/^(#{1,3}\s|>|[-*+]|\d+\.|!\[|→\s|★\s|\*\*(IMPORTANTE|ALERTA|DICA)[!]?\*\*/)`) cobre blocos estruturados comuns, mas padrões markdown que não casem a regex (ex: linhas com markdown inline puro ou padrões personalizados) podem ser capturadas na caixa. Padrão é conservador; risco baixo se capítulos mantêm estrutura consistente.
+**Watch for:** Parser lookahead para CaixaDestaque usa regex com múltiplos marcadores estruturais (headings, listas, imagens, decorações); a documentação de testes cobre 21 casos mas são comentados e não rodam automaticamente. Nenhum concern bloqueante confirmado, mas a cobertura de testes permanece manual.
 
-**Verdict**: NEEDS_CHANGES
-
----
+**Verdict**: APPROVED
 
 ## High-level view
 
-Padrões CSS puro (5 estilos de textura, 3 níveis de sombra, decorações de canto) e 6 temas por capítulo formam base visual em variáveis e pseudo-elementos. IconBloco, CaixaDestaque e ListaDecorada formalizam novos tipos de conteúdo destacado; cada um mapeia tipo para tema (importante → red, alerta → yellow, info → blue). Parser estende com 3 funções auxiliares que rodam antes de listas comuns, mantendo markdown antigo intacto: linhas com `-` continuam sendo `dica`/`macete`, quotes continuam `balao`. TypeScript `Bloco` union expande de 5 para 8 tipos, refletindo os 4 novos componentes. BlocosHQ.astro estende seu switch com 4 casos novos, roteando coerentemente sem mutação de legado. FlipBook e PaginaHQ são completamente intocados.
-
-Risco estrutural: QuadroMini é componente órfão (sem parser). CaixaDestaque lookahead é conservador.
-
----
+A arquitetura de tipo `Bloco` foi expandida de 5 para 8 tipos de union, adicionando `icon-bloco`, `caixa-destaque` e `lista-decorada`. O parser agora reconhece três padrões markdown novos: `**TIPO:**` (IconBloco inline), `**TIPO!**` em linha separada (CaixaDestaque multi-linha com lookahead), e `→`/`★` (ListaDecorada). O componente órfão QuadroMini foi removido. Os estilos CSS foram expandidos com texturas puras (halftone, linhas, ruído, crosshatch, dots) e suporte a temas de cores (red, blue, green, yellow, cyan, purple). O parser preserva markdown inline e mantém retrocompatibilidade com blocos legados (balões, dicas, macetes, figuras, listas numeradas).
 
 <details>
-<summary>Issues (2)</summary>
+<summary>Issues (1)</summary>
 
-1. **QuadroMini dead code** — Componente QuadroMini implementado em novo arquivo e roteado em BlocosHQ.astro, mas nenhuma sintaxe markdown o gera. Type `'quadro-mini'` não aparece no union `Bloco` nem no parser. Remove o import e case em BlocosHQ.astro, ou adicione suporte parser que construa esse tipo (ex: sintaxe `### [!BOX] Título` ou similar).
-
-2. **CaixaDestaque lookahead incomplete** — Regex para terminar coleta de conteúdo (`/^(#{1,3}\s|>|[-*+]|\d+\.|!\[|→\s|★\s|\*\*(IMPORTANTE|ALERTA|DICA)[!]?\*\*/)`) cobre headings, quotes, listas comuns, figuras, listas decoradas e anotações. Padrão é robusto vs. markdown estruturado. Risco: linhas que não casem nenhum padrão (ex: parágrafo puro com markdown inline como `**bold**` que não inicia com `**TIPO:**`) são capturadas na caixa. Recomendação: adicionar teste unitário que valida termination para edge cases, ou documentar limite de suporte (CaixaDestaque espera conteúdo simples entre estruturas).
+1. **Testes documentados não rodam automaticamente** — A documentação de 21 casos de teste foi criada em `.test.ts` mas permanece comentada. Sem execução contínua, regressões no lookahead de CaixaDestaque podem passar despercebidas se o markdown nos capítulos mudasse. Descomente os testes e adicione vitest ao pipeline de CI.
 
 </details>
 
 <details>
 <summary>Details</summary>
 
-### Parser integration: precedence and backward compatibility
+### Parser Extension: Novos Padrões Markdown
 
-Blocos novos (ListaDecorada, IconBloco, CaixaDestaque) ocupam precedência antes de listas comuns — headings → quotes → figuras → ListaDecorada → IconBloco → CaixaDestaque → listas comuns (legado `dica`/`macete`). Esta sequência permite novos padrões capturarem linhas apropriadas sem quebrar construções antigas. Build sucesso com 12 capítulos; capítulos 01–05 e 07–10 renderizam sem mudanças (markdown antigo intacto). Capítulo 06 piloto aplica nova sintaxe: linhas com `→ ` → ListaDecorada tipo `setas`, linhas com `★ ` → tipo `simbolos`, linhas `**IMPORTANTE:**` → IconBloco, linhas `**ALERTA!**` → CaixaDestaque. Compatibilidade retroativa confirmada pela verificação de build.
+O `parseCapitulo` agora reconhece três padrões novos: `parseIconBloco()` extrai `**TIPO:** descrição`, `parseCaixaDestaqueHeader()` detecta `**TIPO!**` como delimitador multi-linha, `detectListDecoradaMarker()` reconhece `→` e `★`. A principal complexidade está no lookahead de CaixaDestaque: após `**ALERTA!**`, coleta linhas até encontrar um marcador estrutural (heading, quote, lista, imagem, decoração, novo bloco). A regex inicia com `^` para não capturar `**bold**` no meio de parágrafos.
 
-### Components and routing
+A ordem de tentativa no loop (heading → quote → imagem → IconBloco → CaixaDestaque → ListaDecorada → listas legadas → parágrafo) garante que decorações novas não roubem linhas de blocos existentes. Cada transição chama `flushListaDecorada()` para finalizar listas decoradas pendentes. O bilhete de verificação confirma retrocompatibilidade: todos os 12 capítulos parseiam sem mudança.
 
-IconBloco, CaixaDestaque e ListaDecorada cada um mapeia `tipo` enum para tema CSS (`tipo: 'importante'` → `theme-red`, `tipo: 'alerta'` → `theme-yellow`, `tipo: 'info'` → `theme-blue`). BlocosHQ.astro estende seu map com 4 novos cases; legado (`dica`, `macete`) continua em `CaixaMacete.astro` sem mutação.
+### Type Extension e Roteamento
 
-### Type extension: `Bloco` union
+O union `Bloco` em `hq.ts` agora inclui `icon-bloco`, `caixa-destaque`, `lista-decorada`. Em `BlocosHQ.astro`, três novos branches foram adicionados ao roteador de tipos. Cada branch detecta o type e passa props ao componente correspondente. O roteador preserva a estrutura anterior: se nenhum type casa, retorna `CaixaMacete` (legado).
 
-Union `Bloco` estende de 5 tipos originais (texto, balao, dica, macete, figura) para 8, com 4 novos tipos: `icon-bloco`, `caixa-destaque`, `lista-decorada`, e `quadro-mini`. TypeScript discriminated union força exhaustiveness em BlocosHQ.astro.
+### Novos Componentes Astro
 
-### CSS and performance
+`IconBloco.astro` mapeia `tipo` → cor (info→blue, alerta→yellow, importante→red, dica→cyan) e renderiza ícone à esquerda com conteúdo à direita. `CaixaDestaque.astro` renderiza emoji + título opcional + conteúdo (via `inlineMd()`, permitindo markdown inline). `ListaDecorada.astro` renderiza `<ul>` com decorador (`→` ou `★`) gerado via `::before` CSS. Nenhum componente usa JavaScript.
 
-Novo arquivo `hq-patterns.css` (464 linhas) define 5 padrões CSS puro (halftone radial, linhas diagonais/verticais, ruído, crosshatch, dots), 3 níveis de sombra (light, medium, strong), decorações de canto e 6 temas (red, blue, green, yellow, cyan, purple) via custom properties. Padrões usam `radial-gradient`, `repeating-linear-gradient` e pseudo-elementos — sem imagens, sem SVG embutido, sem JS gerador. Componentes IconBloco, CaixaDestaque, ListaDecorada aplicam temas conforme tipo. Responsividade: padrões CSS escalam naturalmente; sem breakpoints específicos para desabilitar padrões em mobile. Performance verificada via build sucesso (1.48s).
+### CSS e Texturas
 
-### Parser helpers and new syntax
+`hq-patterns.css` define 7 padrões de textura puros (halftone, linhas em 3 ângulos, ruído, crosshatch, dots) usando apenas gradientes CSS. Sombras 3D usam box-shadow em camadas. Decorações de canto usam pseudo-elementos. Temas definem 6 variáveis de cor (red, blue, green, yellow, cyan, purple) que componentes usam via `var(--theme-primary)` etc. Responsividade mobile ajusta sombras e tamanhos em 768px e 480px.
 
-Três helpers novos em parse-capitulo.ts detectam novos padrões: `parseIconBloco()` (linhas iniciando `**TIPO:`), `parseCaixaDestaqueHeader()` (linhas isoladas `**ALERTA!**`), `detectListDecoradaMarker()` (linhas iniciando `→ ` ou `★ `). No loop principal, testes rodam em ordem: IconBloco → CaixaDestaque → ListaDecorada → fallback a listas legadas.
+### Verificação e Limpeza
 
-### CaixaDestaque content collection
+Build passou com sucesso em 2.08s em 12 capítulos, zero erros TypeScript, compatibilidade retroativa confirmada, FlipBook e PaginaHQ intactos. O componente QuadroMini foi removido (dead code—estava definido em tipos e importado mas sem implementação nem parser). Testes foram documentados (21 casos em 5 grupos) com instruções para ativar via vitest, mas permanecem comentados.
 
-Quando `parseCaixaDestaqueHeader` casa uma linha (ex: `**ALERTA!**`), parser coleta próximas linhas até atingir qualquer uma de: linha vazia, heading, quote, lista comum, lista decorada, figura ou nova anotação. Lookahead regex: `/^(#{1,3}\s|>|[-*+]\s|\d+\.|!\[|→\s|★\s|\*\*(IMPORTANTE|ALERTA|DICA)[!]?\*\*)/.test(nextLine)`. Risco: linhas internas que não casem lookahead (ex: parágrafo puro com markdown inline `**bold texto**` que não inicia com `**TIPO:**`) são capturadas. Capítulo 06 piloto não apresenta edge case (estrutura é limpa), mas padrão pode ser frágil com markdown variável.
+### Documentação de Testes
 
-### No mutation of FlipBook, PaginaHQ
+`parse-capitulo.test.ts` documenta 21 casos de teste esperados (IconBloco 4, CaixaDestaque lookahead 9, CaixaDestaque conteúdo 4, ListaDecorada 2, retrocompatibilidade 3) com input/output e validação para cada. Inclui exemplo vitest comentado. Sem execução automatizada, esses testes servem como especificação manual, não como rede de segurança contínua.
 
-Verificação em diff: zero mudanças em FlipBook.astro e PaginaHQ.astro. Mudanças isoladas em internals (BlocosHQ, parser, tipos) e novos componentes. Nenhum impacto em renderização de flip-mode ou scroll-mode.
+### Tipo 'numeros' Não Implementado
 
-### Test coverage
-
-Nenhum teste unitário visível para helpers (parse-capitulo.ts não inclui `.test.ts`), nem para edge cases de lookahead. Recomendação: adicionar testes unitários para helpers (parseIconBloco, parseCaixaDestaqueHeader, detectListDecoradaMarker) cobrindo casos legítimos e edge cases (ex: CaixaDestaque terminando em markdown inline).
+O tipo `lista-decorada` define `tipo: 'setas' | 'simbolos' | 'numeros'`, mas o parser detecta apenas setas e símbolos. Não há padrão markdown mapeado para 'numeros' (listas numeradas já são capturadas por listas legadas). O tipo é scaffolding para extensão futura, não um erro.
 
 </details>
 
----
-
 <details>
-<summary>Files changed</summary>
+<summary>File map</summary>
 
-- **hq-patterns.css** (novo, 464 linhas) — Padrões CSS puro (halftone, linhas, ruído, crosshatch, dots), 3 sombras, decorações canto, 6 temas.
-- **hq.ts** (27 linhas modificadas) — Union `Bloco` estendido: adiciona `icon-bloco`, `caixa-destaque`, `lista-decorada`, `quadro-mini`.
-- **parse-capitulo.ts** (166 linhas modificadas) — 3 helpers novos, precedência reordenada, coleta de CaixaDestaque com lookahead.
-- **BlocosHQ.astro** (37 linhas modificadas) — 4 imports novos, 4 cases novos no mapa de roteamento.
-- **IconBloco.astro** (novo, 26 linhas) — Componente para anotações inline com ícone, tipo, título, descrição.
-- **CaixaDestaque.astro** (novo, 33 linhas) — Caixa visual para alertas/destaques com ícone badge, opcional título, conteúdo markdown.
-- **ListaDecorada.astro** (novo, 28 linhas) — Lista com bullets temáticos (setas `→`, símbolos `★`, números).
-- **QuadroMini.astro** (novo, 29 linhas) — Painel pequeno inline (não utilizado; dead code).
-- **global.css** (70 linhas modificadas) — Importa hq-patterns.css; ajustes em variáveis de tema.
-- **capitulos/06-permanencia-estudantil.md** (109 mudanças) — Aplicação de nova sintaxe (setas, símbolos, anotações).
-- **Outros capítulos** (8 arquivos editados) — Atualizações menores de conteúdo (não estrutura).
+- `web/src/types/hq.ts` — Adicionados 3 novos tipos de `Bloco` union (icon-bloco, caixa-destaque, lista-decorada)
+- `web/src/utils/parse-capitulo.ts` — 166 linhas adicionadas: 3 helpers de parse, estado de lista decorada, lookahead para CaixaDestaque, 8 `flushListaDecorada()` calls estratégicos, suporte para IconBloco e ListaDecorada inline
+- `web/src/components/BlocosHQ.astro` — Adicionados 3 branches de roteamento para novos tipos
+- `web/src/components/IconBloco.astro` — Novo componente (28 linhas)
+- `web/src/components/CaixaDestaque.astro` — Novo componente (33 linhas)
+- `web/src/components/ListaDecorada.astro` — Novo componente (29 linhas)
+- `web/src/styles/hq-patterns.css` — Adicionado novo arquivo (464 linhas) com texturas CSS, sombras, decorações, temas, estilos de bloco, responsive
+- `web/src/utils/parse-capitulo.test.ts` — Novo arquivo de documentação de testes (191 linhas, comentado, pronto para vitest)
+- `capitulos/*.md` — 5 arquivos de capítulo atualizados com nova sintaxe (nova modalidade de blocos + conteúdo satirista em 70/30)
+- `web/src/content/capitulos/04-burocracia-academica.md` — Atualizado com novos padrões
 
-[Full diff](origin/main..main)
+**Full diff:** `git diff origin/main..HEAD`
 
 </details>
 
